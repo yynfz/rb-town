@@ -121,4 +121,4 @@ while keeping sensitive personal information under the citizen's control.
 
 ## Status
 
-🚧 ETHOnline 2026 Hackathon Prototype
+🚧 ETHOnline 2026 Prototype

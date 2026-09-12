@@ -1,7 +1,7 @@
 # Reality Bridge — MVP Technical Specification
 
 **Status**: Ready for implementation
-**Scope**: ETHOnline 2026 Hackathon Prototype
+**Scope**: ETHOnline 2026 Prototype
 **Architecture**: 100% client-side, serverless, live Sepolia testnet
 
 ---

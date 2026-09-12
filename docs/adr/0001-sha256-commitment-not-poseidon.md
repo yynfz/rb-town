@@ -1,6 +1,6 @@
 # SHA-256 over Poseidon for the commitment scheme
 
-The commitment that goes on-chain is `SHA-256(nonce || canonical_json)`, not a Poseidon hash. Poseidon is ZK-friendly and would allow a citizen to produce a zero-knowledge proof that they know the pre-image without revealing it — a natural next step for this system. We chose SHA-256 because it is available natively in the browser (Web Crypto API), requires no additional dependencies, and is sufficient to demonstrate the commitment property for a hackathon prototype. The Poseidon path is the production upgrade: when ZK proofs become a priority, replace the hash function and regenerate the EAS schema.
+The commitment that goes on-chain is `SHA-256(nonce || canonical_json)`, not a Poseidon hash. Poseidon is ZK-friendly and would allow a citizen to produce a zero-knowledge proof that they know the pre-image without revealing it — a natural next step for this system. We chose SHA-256 because it is available natively in the browser (Web Crypto API), requires no additional dependencies. The Poseidon path is the production upgrade: when ZK proofs become a priority, replace the hash function and regenerate the EAS schema.
 
 ## Considered Options
 

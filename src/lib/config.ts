@@ -19,7 +19,7 @@ export const EAS_SCHEMA_STRING =
 // IMPORTANT: Do not change this value without re-registering the schema,
 // as all downstream attestations depend on it.
 export const EAS_SCHEMA_UID =
-  "0x0000000000000000000000000000000000000000000000000000000000000000" as const;
+  "0xbd8af99e7a0171b7598666eff14745aa05c2c8af7ebf9db012892d9197e1425f" as const;
 
 // World ID Incognito Action — single global action for this prototype.
 // A citizen can only complete this action once (permanent nullifier).

@@ -9,18 +9,32 @@
  *   PRIVATE_KEY=0x... SEPOLIA_RPC_URL=https://... node scripts/register-eas-schema.mjs
  */
 
-import { SchemaRegistry } from "@ethereum-attestation-service/eas-sdk";
+import { createRequire } from "module";
 import { ethers } from "ethers";
+import fs from "fs";
+
+if (fs.existsSync(".env.local")) {
+  process.loadEnvFile(".env.local");
+} else if (fs.existsSync(".env")) {
+  process.loadEnvFile(".env");
+}
+
+const require = createRequire(import.meta.url);
+const { SchemaRegistry } = require("@ethereum-attestation-service/eas-sdk");
 
 const SCHEMA_REGISTRY_ADDRESS = "0x0a7E2Ff54e76B8E6659aedc9103FB21c038050D0";
 const SCHEMA_STRING =
   "bytes32 commitment,uint8 signalLevel,uint8 schemaVersion,bytes4 regionCode,uint64 submittedAt";
 
-const privateKey = process.env.PRIVATE_KEY;
-const rpcUrl = process.env.SEPOLIA_RPC_URL ?? "https://rpc.sepolia.org";
+const privateKey = process.env.SEPOLIA_PRIVATE_KEY ?? process.env.PRIVATE_KEY;
+const rpcUrl =
+  process.env.SEPOLIA_RPC_URL ??
+  process.env.NEXT_PUBLIC_SEPOLIA_RPC_URL ??
+  "https://rpc.sepolia.org";
 
 if (!privateKey) {
-  console.error("Error: PRIVATE_KEY environment variable is required.");
+  console.error("Error: SEPOLIA_PRIVATE_KEY or PRIVATE_KEY environment variable is required.");
+  console.error("  Set SEPOLIA_PRIVATE_KEY in .env.local or run:");
   console.error("  PRIVATE_KEY=0x... SEPOLIA_RPC_URL=https://... node scripts/register-eas-schema.mjs");
   process.exit(1);
 }
@@ -38,14 +52,13 @@ const registry = new SchemaRegistry(SCHEMA_REGISTRY_ADDRESS);
 registry.connect(signer);
 
 try {
+  console.log("Submitting transaction and waiting for confirmation...");
+
   const tx = await registry.register({
     schema: SCHEMA_STRING,
     resolverAddress: ethers.ZeroAddress,
     revocable: false,
   });
-
-  console.log(`Transaction submitted: ${tx.tx.hash}`);
-  console.log("Waiting for confirmation...");
 
   const schemaUid = await tx.wait();
   console.log();

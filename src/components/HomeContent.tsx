@@ -3,6 +3,7 @@
 import { useAccount } from "wagmi";
 import { sepolia } from "wagmi/chains";
 import Link from "next/link";
+import Image from "next/image";
 import { WalletConnect } from "./WalletConnect";
 import { SubmissionFlow } from "./SubmissionFlow";
 
@@ -20,7 +21,17 @@ export function HomeContent() {
   }
 
   return (
-    <div className="flex flex-1 flex-col items-center justify-center gap-6 px-6 py-24 text-center">
+    <div className="flex flex-1 flex-col items-center justify-center gap-6 px-6 py-20 text-center">
+      <div className="relative mb-2 flex items-center justify-center">
+        <div className="absolute inset-0 rounded-2xl bg-indigo-500/20 blur-xl" />
+        <Image
+          src="/rb-logo-hq.png"
+          alt="Reality Bridge Logo"
+          width={96}
+          height={96}
+          className="relative rounded-2xl border border-white/10 shadow-2xl object-cover"
+        />
+      </div>
       <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs text-indigo-400">
         Ethereum Sepolia Testnet
       </div>

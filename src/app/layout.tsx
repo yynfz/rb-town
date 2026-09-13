@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   title: "Reality Bridge",
   description:
     "A privacy-preserving citizen data-quality layer — bridge the gap between Recorded Reality and Lived Reality.",
+  icons: {
+    icon: "/rb-logo-hq.png",
+    apple: "/rb-logo-hq.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

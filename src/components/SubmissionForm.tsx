@@ -108,7 +108,7 @@ export function SubmissionForm({ onSubmit }: SubmissionFormProps) {
     >
       <div className="border-b border-slate-200 dark:border-slate-800 pb-4">
         <h2 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
-          Reality Signal Submission
+          Report Lived Reality
         </h2>
         <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
           Select your province and rate the socioeconomic indicators matching your lived reality.
@@ -187,9 +187,6 @@ export function SubmissionForm({ onSubmit }: SubmissionFormProps) {
                     <div>
                       <span className="text-sm font-semibold text-slate-900 dark:text-slate-100 block leading-tight">
                         {meta.label}
-                      </span>
-                      <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 dark:text-slate-500">
-                        Weight: {meta.weight}x
                       </span>
                     </div>
                   </div>
@@ -285,7 +282,7 @@ export function SubmissionForm({ onSubmit }: SubmissionFormProps) {
       <div className="p-4 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h4 className="text-xs font-bold text-slate-400 dark:text-slate-400 uppercase tracking-wider">
-            Live Reality Signal Preview
+            Lived Reality Status Preview
           </h4>
           <p className="text-2xl font-black text-slate-900 dark:text-slate-100 mt-0.5">
             Score: {livePreview.score} <span className="text-slate-400 text-base font-normal">/ 10</span>
@@ -297,7 +294,7 @@ export function SubmissionForm({ onSubmit }: SubmissionFormProps) {
               livePreview.signal
             )}`}
           >
-            Signal: {livePreview.signal}
+            Status: {livePreview.signal === "none" ? "Aligned" : livePreview.signal}
           </span>
         </div>
       </div>

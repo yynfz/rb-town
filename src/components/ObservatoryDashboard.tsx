@@ -65,7 +65,7 @@ export function ObservatoryDashboard({
       : data.bySignal;
 
     return [
-      { name: "None", value: sourceBySignal.none, color: SIGNAL_COLORS.none, key: "none" },
+      { name: "Aligned", value: sourceBySignal.none, color: SIGNAL_COLORS.none, key: "none" },
       { name: "Low", value: sourceBySignal.LOW, color: SIGNAL_COLORS.LOW, key: "LOW" },
       { name: "Medium", value: sourceBySignal.MEDIUM, color: SIGNAL_COLORS.MEDIUM, key: "MEDIUM" },
       { name: "High", value: sourceBySignal.HIGH, color: SIGNAL_COLORS.HIGH, key: "HIGH" },
@@ -177,7 +177,7 @@ export function ObservatoryDashboard({
         {/* Signal Distribution Donut Chart */}
         <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm col-span-1">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-800">Signal Severity</h3>
+            <h3 className="text-lg font-semibold text-gray-800">Divergence Severity</h3>
             {selectedProvinceInfo && (
               <span className="text-xs font-medium text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">
                 {selectedProvinceInfo.name}

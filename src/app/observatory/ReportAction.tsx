@@ -30,7 +30,7 @@ export function ReportAction() {
               onClick();
             }
           }}
-          className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+          className="group relative flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all shadow-sm bg-indigo-600 text-white hover:bg-indigo-500 active:bg-indigo-700 shadow-indigo-600/20"
         >
           Report Lived Reality &rarr;
         </button>

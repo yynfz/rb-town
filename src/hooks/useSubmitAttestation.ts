@@ -16,6 +16,7 @@ import type { Payload } from "../lib/types";
 export interface AttestationResult {
   attestationUID: string;
   nonce: string;
+  commitment: string;
 }
 
 const SIGNAL_LEVEL_MAPPING: Record<SignalLevel, number> = {
@@ -97,6 +98,7 @@ export function useSubmitAttestation() {
         return {
           attestationUID: newAttestationUID,
           nonce: nonceHex,
+          commitment,
         };
       } catch (err: unknown) {
         console.error("Attestation failed:", err);

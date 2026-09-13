@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { useAccount, useConnect, useDisconnect, useSwitchChain, useBalance } from "wagmi";
-import { sepolia } from "wagmi/chains";
+import { useAccount, useConnect, useDisconnect, useSwitchChain, useBalance, useEnsName } from "wagmi";
+import { sepolia, mainnet } from "wagmi/chains";
 import { formatUnits } from "viem";
 import { getWalletIcon } from "./WalletIcons";
 import { LegalModal, LegalTab } from "./LegalModal";
@@ -36,6 +36,7 @@ export function WalletConnect({ customTrigger }: { customTrigger?: (onClick: () 
   const { disconnect } = useDisconnect();
   const { switchChain } = useSwitchChain();
   const { data: balanceData } = useBalance({ address, chainId: sepolia.id });
+  const { data: ensName } = useEnsName({ address, chainId: mainnet.id });
   
   const [isConnectModalOpen, setIsConnectModalOpen] = useState(false);
   const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
@@ -179,7 +180,7 @@ export function WalletConnect({ customTrigger }: { customTrigger?: (onClick: () 
           <div className="px-6 py-4 flex flex-col gap-1">
             <div className="flex items-center gap-2 group cursor-pointer w-max" onClick={handleCopy}>
               <span className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                {address ? formatAddress(address) : ''}
+                {address ? (ensName || formatAddress(address)) : ''}
               </span>
               {copied ? <Icons.Check className="w-5 h-5 text-green-500" /> : <Icons.Copy className="w-5 h-5 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />}
             </div>
@@ -244,7 +245,7 @@ export function WalletConnect({ customTrigger }: { customTrigger?: (onClick: () 
             ) : (
               <span className="flex items-center gap-2">
                 <div className="w-5 h-5 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 mr-1" />
-                {formatAddress(address)}
+                {ensName || formatAddress(address)}
               </span>
             )
           ) : (

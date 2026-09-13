@@ -105,9 +105,11 @@ export function ObservatoryDashboard({
       {/* Header & Metrics */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-gray-200 pb-6 gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Observatory</h1>
+          <h1 className="text-3xl font-bold text-gray-900 tracking-tight">
+            Indonesia Lived Reality Observatory
+          </h1>
           <p className="text-gray-500 mt-2 max-w-2xl">
-            Live, aggregated view of socioeconomic realities attested by citizens across provinces in Indonesia.
+            Live, aggregated view of socioeconomic realities attested by verified citizens across 38 provinces in Indonesia compared with official BPS data.
           </p>
         </div>
         

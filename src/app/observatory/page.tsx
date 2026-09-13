@@ -22,9 +22,9 @@ export default function ObservatoryPage() {
           />
           <div>
             <h1 className="text-lg font-semibold tracking-tight text-gray-900">
-              Reality Bridge
+              Indonesia Reality Bridge
             </h1>
-            <p className="text-xs text-gray-500">Observatory View</p>
+            <p className="text-xs text-gray-500">Indonesia Observatory View</p>
           </div>
         </Link>
         <Link

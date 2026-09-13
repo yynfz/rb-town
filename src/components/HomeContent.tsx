@@ -32,15 +32,15 @@ export function HomeContent() {
           className="relative rounded-2xl border border-white/10 shadow-2xl object-cover"
         />
       </div>
-      <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs text-indigo-400">
-        Reality Bridge
+      <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs text-indigo-400 font-semibold">
+        🇮🇩 Indonesia Reality Bridge
       </div>
       <h2 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl text-white">
-        Bridging Recorded Data with{" "}
+        Bridging Official BPS Data with{" "}
         <span className="text-indigo-400">Lived Reality.</span>
       </h2>
       <p className="max-w-xl text-base text-slate-300 font-medium leading-relaxed">
-        Verify your identity with World ID to report shifts in your Lived Reality and create verifiable on-chain signals while keeping your personal data completely off-chain.
+        Verify your identity with World ID to report shifts in your Lived Reality across Indonesian provinces, creating verifiable on-chain attestations while keeping your personal data completely off-chain.
       </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <WalletConnect />

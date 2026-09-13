@@ -95,9 +95,8 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
     <div className="flex flex-col items-center justify-center p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl max-w-md mx-auto mt-8">
       <h2 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Verify I&apos;m Human</h2>
       <p className="text-slate-600 dark:text-slate-300 text-center mb-6 text-sm leading-relaxed">
-        To submit your Reality Signal, please verify your humanity with World ID.
-        This ensures each citizen&apos;s voice is counted exactly once. Your data
-        remains anonymous.
+        To report your lived reality in Indonesia, please verify your humanity with World ID.
+        This ensures each citizen&apos;s report is counted exactly once while keeping your identity private.
       </p>
 
       {error && (

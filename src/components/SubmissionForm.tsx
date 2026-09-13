@@ -108,7 +108,7 @@ export function SubmissionForm({ onSubmit }: SubmissionFormProps) {
     >
       <div className="border-b border-slate-200 dark:border-slate-800 pb-4">
         <h2 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
-          Report Lived Reality
+          Report Lived Reality (Indonesia)
         </h2>
         <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
           Select your province and rate the socioeconomic indicators matching your lived reality.
@@ -171,13 +171,12 @@ export function SubmissionForm({ onSubmit }: SubmissionFormProps) {
             return (
               <div
                 key={cat}
-                className={`p-4 rounded-xl border transition-all ${
-                  val === -1
+                className={`p-4 rounded-xl border transition-all ${val === -1
                     ? "bg-rose-500/5 border-rose-500/30"
                     : val === 1
-                    ? "bg-emerald-500/5 border-emerald-500/30"
-                    : "bg-slate-50 dark:bg-slate-800/40 border-slate-200 dark:border-slate-800"
-                }`}
+                      ? "bg-emerald-500/5 border-emerald-500/30"
+                      : "bg-slate-50 dark:bg-slate-800/40 border-slate-200 dark:border-slate-800"
+                  }`}
               >
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
@@ -236,11 +235,10 @@ export function SubmissionForm({ onSubmit }: SubmissionFormProps) {
                       onClick={() =>
                         setCategories((prev) => ({ ...prev, [cat]: DIRECTIONAL.WORSENED }))
                       }
-                      className={`transition-colors cursor-pointer ${
-                        val === -1
+                      className={`transition-colors cursor-pointer ${val === -1
                           ? "text-rose-600 dark:text-rose-400 font-bold"
                           : "text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
-                      }`}
+                        }`}
                     >
                       🔴 Worsened
                     </button>
@@ -249,11 +247,10 @@ export function SubmissionForm({ onSubmit }: SubmissionFormProps) {
                       onClick={() =>
                         setCategories((prev) => ({ ...prev, [cat]: DIRECTIONAL.UNCHANGED }))
                       }
-                      className={`transition-colors cursor-pointer ${
-                        val === 0
+                      className={`transition-colors cursor-pointer ${val === 0
                           ? "text-slate-700 dark:text-slate-200 font-bold"
                           : "text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
-                      }`}
+                        }`}
                     >
                       ⚪ Unchanged
                     </button>
@@ -262,11 +259,10 @@ export function SubmissionForm({ onSubmit }: SubmissionFormProps) {
                       onClick={() =>
                         setCategories((prev) => ({ ...prev, [cat]: DIRECTIONAL.IMPROVED }))
                       }
-                      className={`transition-colors cursor-pointer ${
-                        val === 1
+                      className={`transition-colors cursor-pointer ${val === 1
                           ? "text-emerald-600 dark:text-emerald-400 font-bold"
                           : "text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
-                      }`}
+                        }`}
                     >
                       🟢 Improved
                     </button>
@@ -303,11 +299,10 @@ export function SubmissionForm({ onSubmit }: SubmissionFormProps) {
       <button
         type="submit"
         disabled={!isComplete}
-        className={`w-full py-3.5 px-4 rounded-xl shadow-lg text-base font-bold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all cursor-pointer ${
-          isComplete
+        className={`w-full py-3.5 px-4 rounded-xl shadow-lg text-base font-bold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all cursor-pointer ${isComplete
             ? "bg-indigo-600 hover:bg-indigo-500 shadow-indigo-500/20 active:scale-[0.99]"
             : "bg-slate-300 dark:bg-slate-800 text-slate-500 cursor-not-allowed shadow-none"
-        }`}
+          }`}
       >
         Review & Submit Attestation
       </button>

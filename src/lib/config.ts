@@ -37,3 +37,25 @@ export const SEPOLIA_RPC_URL =
 
 // Schema version — increment if the schema definition changes (requires new registration)
 export const SCHEMA_VERSION = 1 as const;
+
+// World ID Router Address (Sepolia Staging)
+export const WORLD_ID_ROUTER_ADDRESS =
+  "0x11cA3127182f7583EfC416a8771BD4d11Fae4334" as const;
+
+// Minimal ABI for World ID Router to verify proofs client-side
+export const WORLD_ID_ROUTER_ABI = [
+  {
+    inputs: [
+      { internalType: "uint256", name: "root", type: "uint256" },
+      { internalType: "uint256", name: "groupId", type: "uint256" },
+      { internalType: "uint256", name: "signalHash", type: "uint256" },
+      { internalType: "uint256", name: "nullifierHash", type: "uint256" },
+      { internalType: "uint256", name: "externalNullifierHash", type: "uint256" },
+      { internalType: "uint256[8]", name: "proof", type: "uint256[8]" },
+    ],
+    name: "verifyProof",
+    outputs: [],
+    stateMutability: "view",
+    type: "function",
+  },
+] as const;

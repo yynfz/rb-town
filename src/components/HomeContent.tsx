@@ -2,6 +2,7 @@
 
 import { useAccount } from "wagmi";
 import { sepolia } from "wagmi/chains";
+import Link from "next/link";
 import { WalletConnect } from "./WalletConnect";
 import { SubmissionFlow } from "./SubmissionFlow";
 
@@ -31,7 +32,15 @@ export function HomeContent() {
         Connect your wallet to verify your humanity and report changes in your
         socioeconomic circumstances — without putting your personal data on‑chain.
       </p>
-      <WalletConnect />
+      <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <WalletConnect />
+        <Link 
+          href="/observatory" 
+          className="rounded-lg border border-indigo-500/30 bg-transparent px-4 py-2 text-sm font-medium text-indigo-400 hover:bg-indigo-500/10 transition-colors"
+        >
+          View Observatory
+        </Link>
+      </div>
     </div>
   );
 }

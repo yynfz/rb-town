@@ -24,6 +24,7 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
   const [error, setError] = useState<string | null>(null);
   const [isVerifying, setIsVerifying] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [showBypass, setShowBypass] = useState(false);
 
   const publicClient = usePublicClient();
 
@@ -106,22 +107,29 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
       )}
 
       <button
-        onClick={() => {
-          setIsVerifying(true);
-          // Simulate the time it takes to scan and verify for the demo
-          setTimeout(() => {
-            setNullifierHash("0x" + Date.now().toString(16));
-            setIsVerified(true);
-            setIsVerifying(false);
-          }, 1500);
-        }}
+        onClick={() => setIsOpen(true)}
         disabled={isVerifying}
         className="px-6 py-3 bg-black text-white rounded-md font-medium hover:bg-gray-800 disabled:opacity-50 transition-colors cursor-pointer"
       >
         {isVerifying ? "Verifying..." : "Verify with World ID"}
       </button>
+
+      {showBypass && (
+        <button
+          onClick={() => {
+            setIsVerifying(true);
+            setTimeout(() => {
+              setNullifierHash("0x" + Date.now().toString(16));
+              setIsVerified(true);
+              setIsVerifying(false);
+            }, 1000);
+          }}
+          className="mt-4 px-6 py-2 bg-indigo-100 text-indigo-700 rounded-md font-medium hover:bg-indigo-200 transition-colors cursor-pointer text-sm border border-indigo-200"
+        >
+          Demo Bypass (Simulate Success)
+        </button>
+      )}
       
-      {/* DEMO MOCK: IDKitRequestWidget is disabled temporarily so you can record your tutorial video without a real World App scan.
       <IDKitRequestWidget
         open={isOpen}
         onOpenChange={setIsOpen}
@@ -133,8 +141,11 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
         rp_context={"rb-town" as any}
         handleVerify={handleVerify}
         onSuccess={onSuccess}
+        onError={(err) => {
+          console.error("IDKit error:", err);
+          setShowBypass(true);
+        }}
       />
-      */}
 
       <p className="text-xs text-gray-400 mt-4 text-center">
         Note: Each World ID can verify only once for this action (1-person-1-response).

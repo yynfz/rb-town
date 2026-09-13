@@ -18,7 +18,10 @@ export const metadata: Metadata = {
   description:
     "A privacy-preserving citizen data-quality layer — bridge the gap between Recorded Reality and Lived Reality.",
   icons: {
-    icon: "/rb-logo-hq.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/rb-logo-hq.png", type: "image/png" },
+    ],
     apple: "/rb-logo-hq.png",
   },
 };

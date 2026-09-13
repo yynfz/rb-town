@@ -39,9 +39,8 @@ export function HomeContent() {
         Your voice.{" "}
         <span className="text-indigo-400">Privately counted.</span>
       </h2>
-      <p className="max-w-xl text-base text-white/60">
-        Connect your wallet to verify your humanity and report changes in your
-        socioeconomic circumstances — without putting your personal data on‑chain.
+      <p className="max-w-xl text-base text-slate-300 font-medium leading-relaxed">
+        Verify your identity with World ID and report real-world changes in your community, keeping your personal data 100% private.
       </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <WalletConnect />

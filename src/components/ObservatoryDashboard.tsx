@@ -81,7 +81,7 @@ export function ObservatoryDashboard({
         <div>
           <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Observatory</h1>
           <p className="text-gray-500 mt-2 max-w-2xl">
-            Live, aggregated view of socioeconomic realities attested by citizens on the Sepolia blockchain.
+            Live, aggregated view of socioeconomic realities attested by citizens across provinces in Indonesia.
           </p>
         </div>
         <div className="mt-4 md:mt-0 text-right">

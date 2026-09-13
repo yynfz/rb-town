@@ -40,7 +40,7 @@ export function HomeContent() {
         <span className="text-indigo-400">Lived Reality.</span>
       </h2>
       <p className="max-w-xl text-base text-slate-300 font-medium leading-relaxed">
-        Verify your identity with World ID and report real-world changes in your community, keeping your personal data 100% private.
+        Verify your identity with World ID to report shifts in your Lived Reality and create verifiable on-chain signals while keeping your personal data completely off-chain.
       </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <WalletConnect />

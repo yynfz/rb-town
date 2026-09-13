@@ -33,7 +33,7 @@ export function HomeContent() {
         />
       </div>
       <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs text-indigo-400">
-        Ethereum Sepolia Testnet
+        Reality Bridge
       </div>
       <h2 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl text-white">
         Bridging Recorded Data with{" "}
@@ -44,8 +44,8 @@ export function HomeContent() {
       </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <WalletConnect />
-        <Link 
-          href="/observatory" 
+        <Link
+          href="/observatory"
           className="rounded-lg border border-indigo-500/30 bg-transparent px-4 py-2 text-sm font-medium text-indigo-400 hover:bg-indigo-500/10 transition-colors"
         >
           View Observatory

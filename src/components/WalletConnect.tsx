@@ -85,58 +85,26 @@ export function WalletConnect() {
           </button>
         </div>
 
-        <div className="p-4 pt-2 flex flex-col gap-3">
-          <button className="relative w-full rounded-2xl p-4 bg-gradient-to-r from-pink-500 to-rose-500 hover:opacity-95 transition-opacity text-left flex items-center gap-4 overflow-hidden group">
-            <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm shrink-0">
-              <Icons.RBLogo className="w-6 h-6" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-white font-semibold text-[15px]">Get RB Wallet</span>
-              <span className="text-white/80 text-[13px] font-medium">Available on iOS, Android</span>
-            </div>
-          </button>
-
-          <button className="w-full rounded-2xl p-4 bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors text-left flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-pink-100 dark:bg-pink-500/20 text-pink-500 flex items-center justify-center shrink-0">
-              <Icons.User className="w-5 h-5" />
-            </div>
-            <span className="text-gray-900 dark:text-white font-semibold text-[15px]">Log in</span>
-          </button>
-
-          <button className="w-full rounded-2xl p-4 bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors text-left flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-500/20 text-blue-500 flex items-center justify-center shrink-0">
-              <Icons.QrCode className="w-5 h-5" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-gray-900 dark:text-white font-semibold text-[15px]">WalletConnect QR</span>
-              <span className="text-gray-500 dark:text-gray-400 text-[13px] font-medium">Scan QR code to connect</span>
-            </div>
-          </button>
-
-          <div className="h-[1px] w-full bg-gray-100 dark:bg-white/5 my-1" />
-
-          <div className="flex flex-col gap-1 max-h-60 overflow-y-auto pr-1 custom-scrollbar">
-            {connectors.map(connector => {
-              const IconComponent = getWalletIcon(connector.name);
-              return (
-                <button
-                  key={connector.uid}
-                  onClick={() => {
-                    connect({ connector });
-                    setIsConnectModalOpen(false);
-                  }}
-                  className="w-full rounded-2xl p-3 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group"
-                >
-                  <div className="flex items-center gap-3">
-                    <IconComponent className="w-10 h-10 rounded-xl" />
-                    <span className="text-gray-900 dark:text-white font-semibold text-[15px] group-hover:text-pink-500 transition-colors">{connector.name}</span>
-                  </div>
-                  <span className="text-xs font-medium text-gray-400 dark:text-gray-500">Detected</span>
-                </button>
-              );
-            })}
-          </div>
+        <div className="p-4 pt-2 flex flex-col gap-1 max-h-72 overflow-y-auto custom-scrollbar">
+          {connectors.map(connector => {
+            const IconComponent = getWalletIcon(connector.name);
+            return (
+              <button
+                key={connector.uid}
+                onClick={() => {
+                  connect({ connector });
+                  setIsConnectModalOpen(false);
+                }}
+                className="w-full rounded-2xl p-3 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group cursor-pointer"
+              >
+                <div className="flex items-center gap-3">
+                  <IconComponent className="w-10 h-10 rounded-xl" />
+                  <span className="text-gray-900 dark:text-white font-semibold text-[15px] group-hover:text-indigo-500 transition-colors">{connector.name}</span>
+                </div>
+                <span className="text-xs font-medium text-gray-400 dark:text-gray-500">Detected</span>
+              </button>
+            );
+          })}
         </div>
 
         <div className="p-5 text-center bg-gray-50/50 dark:bg-white/[0.02] mt-2">
@@ -169,7 +137,6 @@ export function WalletConnect() {
               </div>
             </div>
             <div className="flex items-center gap-1 text-gray-500 dark:text-gray-400">
-              <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"><Icons.Settings className="w-5 h-5" /></button>
               <button 
                 onClick={() => {
                   disconnect();
@@ -203,36 +170,15 @@ export function WalletConnect() {
             </span>
           </div>
 
-          <div className="px-4 flex items-center gap-2">
-            <button className="flex-1 bg-pink-50 dark:bg-pink-500/10 text-pink-500 hover:bg-pink-100 dark:hover:bg-pink-500/20 py-3 rounded-2xl flex flex-col items-center gap-1 transition-colors">
-              <Icons.Send className="w-5 h-5" />
-              <span className="text-sm font-semibold">Send</span>
-            </button>
-            <button className="flex-1 bg-pink-50 dark:bg-pink-500/10 text-pink-500 hover:bg-pink-100 dark:hover:bg-pink-500/20 py-3 rounded-2xl flex flex-col items-center gap-1 transition-colors">
-              <Icons.Receive className="w-5 h-5" />
-              <span className="text-sm font-semibold">Receive</span>
-            </button>
-          </div>
-
-          <div className="px-4 pt-4">
-            <button className="w-full py-3 rounded-2xl border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors flex items-center justify-center gap-2 text-sm font-semibold text-gray-900 dark:text-white">
+          <div className="px-4 pb-4 mt-2">
+            <a 
+              href={`https://sepolia.etherscan.io/address/${address}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3 rounded-2xl border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors flex items-center justify-center gap-2 text-sm font-semibold text-gray-900 dark:text-white cursor-pointer"
+            >
               View on Explorer <Icons.ExternalLink className="w-4 h-4" />
-            </button>
-          </div>
-
-          <div className="px-4 pt-6 pb-2">
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Recent activity</h3>
-            <div className="flex flex-col gap-3">
-              <div className="text-center py-4 text-sm text-gray-500 dark:text-gray-400">
-                No recent activity on this session
-              </div>
-            </div>
-          </div>
-          
-          <div className="px-4 pb-4">
-             <button className="w-full py-3 rounded-2xl bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors flex items-center justify-center gap-2 text-sm font-semibold text-gray-900 dark:text-white">
-                View all activity <Icons.ArrowLeft className="w-4 h-4 rotate-180" />
-             </button>
+            </a>
           </div>
         </div>
       </div>
@@ -251,7 +197,7 @@ export function WalletConnect() {
             ? isWrongNetwork
               ? "bg-amber-100 text-amber-700 hover:bg-amber-200 dark:bg-amber-500/10 dark:text-amber-400 dark:hover:bg-amber-500/20"
               : "bg-gray-100 text-gray-900 hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
-            : "bg-pink-500 text-white hover:bg-pink-600 active:bg-pink-700 shadow-pink-500/25"}
+            : "bg-indigo-600 text-white hover:bg-indigo-500 active:bg-indigo-700 shadow-indigo-600/20"}
         `}
       >
         {isPending ? (

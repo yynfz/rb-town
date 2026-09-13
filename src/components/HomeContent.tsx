@@ -59,7 +59,7 @@ export function HomeContent() {
       baseOpacity={settings.baseOpacity}
       color={settings.useThemeColor ? undefined : settings.color}
       pingArea={[0.22, 0.18, 0.78, 0.82]}
-      className="bg-background flex flex-1 w-full flex-col min-h-[max(600px,calc(100vh-69px))]"
+      className="bg-background flex flex-1 w-full flex-col"
     >
       <div
         aria-hidden="true"

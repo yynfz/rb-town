@@ -130,8 +130,8 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
       </button>
 
       <p className="text-xs text-gray-400 mt-4 text-center">
-        If you have already verified for this action, World App will notify you
-        that you cannot proceed.
+        Note: Each World ID can verify only once for this action (1-person-1-response).
+        If you have already verified, World App will notify you that you cannot verify again.
       </p>
     </div>
   );

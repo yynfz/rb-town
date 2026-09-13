@@ -5,6 +5,7 @@ import { useAccount, useConnect, useDisconnect, useSwitchChain, useBalance } fro
 import { sepolia } from "wagmi/chains";
 import { formatUnits } from "viem";
 import { getWalletIcon } from "./WalletIcons";
+import { LegalModal, LegalTab } from "./LegalModal";
 
 const Icons = {
   X: (props: any) => <svg {...props} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>,
@@ -37,6 +38,8 @@ export function WalletConnect() {
   
   const [isConnectModalOpen, setIsConnectModalOpen] = useState(false);
   const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
+  const [isLegalModalOpen, setIsLegalModalOpen] = useState(false);
+  const [legalTab, setLegalTab] = useState<LegalTab>("tos");
   const [copied, setCopied] = useState(false);
 
   const isWrongNetwork = isConnected && chain?.id !== sepolia.id;
@@ -61,6 +64,11 @@ export function WalletConnect() {
     } else {
       setIsConnectModalOpen(true);
     }
+  };
+
+  const openLegalModal = (tab: LegalTab) => {
+    setLegalTab(tab);
+    setIsLegalModalOpen(true);
   };
 
   const ConnectModal = () => (
@@ -109,7 +117,22 @@ export function WalletConnect() {
 
         <div className="p-5 text-center bg-gray-50/50 dark:bg-white/[0.02] mt-2">
           <p className="text-[12px] leading-relaxed text-gray-500 dark:text-gray-400 font-medium">
-            By connecting a wallet, you agree to Reality Bridge's Terms of Service and consent to its Privacy Policy.
+            By connecting a wallet, you agree to Reality Bridge&apos;s{" "}
+            <button
+              type="button"
+              onClick={() => openLegalModal("tos")}
+              className="text-indigo-600 dark:text-indigo-400 font-semibold underline underline-offset-2 hover:text-indigo-500 transition-colors cursor-pointer"
+            >
+              Terms of Service
+            </button>{" "}
+            and consent to its{" "}
+            <button
+              type="button"
+              onClick={() => openLegalModal("privacy")}
+              className="text-indigo-600 dark:text-indigo-400 font-semibold underline underline-offset-2 hover:text-indigo-500 transition-colors cursor-pointer"
+            >
+              Privacy Policy
+            </button>.
           </p>
         </div>
       </div>
@@ -235,6 +258,12 @@ export function WalletConnect() {
            <AccountModal />
         </div>
       )}
+
+      <LegalModal
+        isOpen={isLegalModalOpen}
+        onClose={() => setIsLegalModalOpen(false)}
+        initialTab={legalTab}
+      />
     </>
   );
 }

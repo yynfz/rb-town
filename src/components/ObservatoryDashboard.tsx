@@ -105,35 +105,13 @@ export function ObservatoryDashboard({
       {/* Header & Metrics */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-gray-200 pb-6 gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 tracking-tight">
-            Indonesia Lived Reality Observatory
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Observatory</h1>
           <p className="text-gray-500 mt-2 max-w-2xl">
-            Live, aggregated view of socioeconomic realities attested by verified citizens across 38 provinces in Indonesia compared with official BPS data.
+            Live, aggregated view of socioeconomic realities attested by citizens across provinces in Indonesia.
           </p>
         </div>
-        
-        <div className="flex flex-wrap items-center gap-6">
-          {/* Province Filter Dropdown */}
-          <div className="flex flex-col">
-            <label htmlFor="province-select" className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">
-              Filter by Province
-            </label>
-            <select
-              id="province-select"
-              value={selectedProvinceCode || ""}
-              onChange={(e) => setSelectedProvinceCode(e.target.value || null)}
-              className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 cursor-pointer"
-            >
-              <option value="">All Provinces (Nationwide)</option>
-              {regionalData.map((p) => (
-                <option key={p.code} value={p.code}>
-                  {p.name} ({p.Count} attestations)
-                </option>
-              ))}
-            </select>
-          </div>
 
+        <div className="flex flex-wrap items-center gap-6">
           <div className="text-right">
             <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">
               {selectedProvinceInfo ? `${selectedProvinceInfo.name} Submissions` : "Total Submissions"}
@@ -153,7 +131,7 @@ export function ObservatoryDashboard({
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
           </div>
-          
+
           <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-indigo-600 text-white font-bold text-xl shadow-lg shadow-indigo-600/20 border border-indigo-500">
@@ -177,7 +155,7 @@ export function ObservatoryDashboard({
                 </div>
               </div>
             </div>
-            
+
             <button
               onClick={() => setSelectedProvinceCode(null)}
               className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-600 hover:text-rose-600 hover:border-rose-200 hover:bg-rose-50 transition-all shadow-sm cursor-pointer whitespace-nowrap"

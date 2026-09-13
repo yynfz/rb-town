@@ -36,11 +36,11 @@ export function HomeContent() {
         🇮🇩 Indonesia Reality Bridge
       </div>
       <h2 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl text-white">
-        Bridging Official BPS Data with{" "}
+        Bridging Recorded Data with{" "}
         <span className="text-indigo-400">Lived Reality.</span>
       </h2>
       <p className="max-w-xl text-base text-slate-300 font-medium leading-relaxed">
-        Verify your identity with World ID to report shifts in your Lived Reality across Indonesian provinces, creating verifiable on-chain attestations while keeping your personal data completely off-chain.
+        Verify your identity with World ID to report shifts in your Lived Reality and create verifiable on-chain signals while keeping your personal data completely off-chain.
       </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <WalletConnect />

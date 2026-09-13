@@ -17,8 +17,8 @@ export default function HomePage() {
             className="rounded-lg object-cover"
           />
           <div>
-            <h1 className="text-lg font-bold tracking-tight text-white">Indonesia Reality Bridge</h1>
-            <p className="text-xs font-medium text-slate-300">Bridging BPS statistics with lived reality</p>
+            <h1 className="text-lg font-bold tracking-tight text-white">Reality Bridge</h1>
+            <p className="text-xs font-medium text-slate-300">Bridging data with lived reality</p>
           </div>
         </Link>
         <WalletConnect />

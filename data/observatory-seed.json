@@ -1,0 +1,81 @@
+{
+  "totalSubmissions": 500,
+  "bySignal": {
+    "none": 100,
+    "LOW": 105,
+    "MEDIUM": 249,
+    "HIGH": 46
+  },
+  "byCategory": {
+    "assets_utilities": {
+      "worsened": 76,
+      "unchanged": 371,
+      "improved": 53
+    },
+    "education": {
+      "worsened": 82,
+      "unchanged": 368,
+      "improved": 50
+    },
+    "employment_income": {
+      "worsened": 230,
+      "unchanged": 248,
+      "improved": 22
+    },
+    "health": {
+      "worsened": 77,
+      "unchanged": 363,
+      "improved": 60
+    },
+    "household_composition": {
+      "worsened": 176,
+      "unchanged": 306,
+      "improved": 18
+    },
+    "housing_conditions": {
+      "worsened": 70,
+      "unchanged": 377,
+      "improved": 53
+    }
+  },
+  "byRegion": {
+    "11": 7,
+    "12": 3,
+    "13": 8,
+    "14": 4,
+    "15": 3,
+    "16": 4,
+    "17": 6,
+    "18": 8,
+    "19": 9,
+    "21": 9,
+    "31": 53,
+    "32": 46,
+    "33": 43,
+    "34": 55,
+    "35": 45,
+    "36": 50,
+    "51": 8,
+    "52": 7,
+    "53": 11,
+    "61": 7,
+    "62": 6,
+    "63": 8,
+    "64": 9,
+    "65": 7,
+    "71": 5,
+    "72": 7,
+    "73": 3,
+    "74": 9,
+    "75": 6,
+    "76": 9,
+    "81": 7,
+    "82": 6,
+    "91": 6,
+    "92": 6,
+    "93": 2,
+    "94": 4,
+    "95": 7,
+    "96": 7
+  }
+}

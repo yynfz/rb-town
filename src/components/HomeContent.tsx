@@ -35,9 +35,9 @@ export function HomeContent() {
       <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs text-indigo-400">
         Ethereum Sepolia Testnet
       </div>
-      <h2 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl">
-        Your voice.{" "}
-        <span className="text-indigo-400">Privately counted.</span>
+      <h2 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl text-white">
+        Bridging Recorded Data with{" "}
+        <span className="text-indigo-400">Lived Reality.</span>
       </h2>
       <p className="max-w-xl text-base text-slate-300 font-medium leading-relaxed">
         Verify your identity with World ID and report real-world changes in your community, keeping your personal data 100% private.

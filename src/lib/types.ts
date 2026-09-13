@@ -12,3 +12,29 @@ export interface Payload {
     housing_conditions: DirectionalIndicator;
   };
 }
+
+export interface CompletedSubmission {
+  payload: Payload;
+  signal: import("./constants").SignalLevel;
+  regionCode: string;
+}
+
+export interface ObservatoryState {
+  totalSubmissions: number;
+  bySignal: {
+    none: number;
+    LOW: number;
+    MEDIUM: number;
+    HIGH: number;
+  };
+  byCategory: Record<
+    import("./constants").Category,
+    {
+      worsened: number;
+      unchanged: number;
+      improved: number;
+    }
+  >;
+  byRegion: Record<string, number>;
+}
+

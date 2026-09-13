@@ -147,31 +147,47 @@ export function ObservatoryDashboard({
 
       {/* Active Province Drill-down Banner */}
       {selectedProvinceInfo && (
-        <div className="flex items-center justify-between rounded-xl border border-indigo-200 bg-indigo-50/80 p-4 shadow-sm">
-          <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600 text-white font-bold text-lg">
-              {selectedProvinceInfo.code}
-            </span>
-            <div>
-              <h2 className="text-lg font-bold text-indigo-950">
-                Detailed View: {selectedProvinceInfo.name}
-              </h2>
-              <p className="text-xs text-indigo-700">
-                Showing province-specific attestation data (
-                {activeRegionDetail ? activeRegionDetail.totalSubmissions : 0} of {data.totalSubmissions} nationwide attestations,{" "}
-                {data.totalSubmissions > 0 && activeRegionDetail
-                  ? ((activeRegionDetail.totalSubmissions / data.totalSubmissions) * 100).toFixed(1)
-                  : 0}
-                %)
-              </p>
-            </div>
+        <div className="relative overflow-hidden rounded-2xl border border-indigo-100 bg-gradient-to-br from-indigo-50/80 via-white to-indigo-50/30 p-6 shadow-sm">
+          <div className="absolute -top-10 -right-10 p-6 opacity-[0.03] pointer-events-none">
+            <svg className="w-64 h-64 text-indigo-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
           </div>
-          <button
-            onClick={() => setSelectedProvinceCode(null)}
-            className="flex items-center gap-1 rounded-lg border border-indigo-300 bg-white px-3 py-1.5 text-xs font-semibold text-indigo-700 hover:bg-indigo-100 transition-colors cursor-pointer"
-          >
-            ✕ Reset to Nationwide View
-          </button>
+          
+          <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-indigo-600 text-white font-bold text-xl shadow-lg shadow-indigo-600/20 border border-indigo-500">
+                {selectedProvinceInfo.code}
+              </div>
+              <div>
+                <h2 className="text-2xl font-black text-slate-900 tracking-tight">
+                  {selectedProvinceInfo.name}
+                </h2>
+                <div className="mt-2 flex flex-wrap items-center gap-2 text-sm font-semibold text-slate-500">
+                  <span className="flex items-center gap-1 text-indigo-700 bg-indigo-100/80 px-2.5 py-1 rounded-lg">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    {activeRegionDetail ? activeRegionDetail.totalSubmissions : 0} Attestations
+                  </span>
+                  <span className="text-slate-300">•</span>
+                  <span>
+                    {data.totalSubmissions > 0 && activeRegionDetail
+                      ? ((activeRegionDetail.totalSubmissions / data.totalSubmissions) * 100).toFixed(1)
+                      : 0}% of National Total
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <button
+              onClick={() => setSelectedProvinceCode(null)}
+              className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-600 hover:text-rose-600 hover:border-rose-200 hover:bg-rose-50 transition-all shadow-sm cursor-pointer whitespace-nowrap"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              Clear Filter
+            </button>
+          </div>
         </div>
       )}
 

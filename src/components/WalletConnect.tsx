@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { useAccount, useConnect, useDisconnect, useSwitchChain, useBalance } from "wagmi";
 import { sepolia } from "wagmi/chains";
 import { formatUnits } from "viem";
@@ -41,6 +42,9 @@ export function WalletConnect() {
   const [isLegalModalOpen, setIsLegalModalOpen] = useState(false);
   const [legalTab, setLegalTab] = useState<LegalTab>("tos");
   const [copied, setCopied] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   const isWrongNetwork = isConnected && chain?.id !== sepolia.id;
   
@@ -247,16 +251,18 @@ export function WalletConnect() {
         )}
       </button>
 
-      {isConnectModalOpen && (
+      {mounted && isConnectModalOpen && createPortal(
         <div className="fixed inset-0 z-[100]" onClick={() => setIsConnectModalOpen(false)}>
            <ConnectModal />
-        </div>
+        </div>,
+        document.body
       )}
 
-      {isAccountModalOpen && (
+      {mounted && isAccountModalOpen && createPortal(
         <div className="fixed inset-0 z-[100]" onClick={() => setIsAccountModalOpen(false)}>
            <AccountModal />
-        </div>
+        </div>,
+        document.body
       )}
 
       <LegalModal

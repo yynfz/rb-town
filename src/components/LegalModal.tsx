@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 const Icons = {
   X: (props: React.SVGProps<SVGSVGElement>) => (
@@ -30,16 +31,18 @@ interface LegalModalProps {
 
 export function LegalModal({ isOpen, onClose, initialTab = "tos" }: LegalModalProps) {
   const [activeTab, setActiveTab] = useState<LegalTab>(initialTab);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     if (isOpen) {
       setActiveTab(initialTab);
     }
   }, [isOpen, initialTab]);
 
-  if (!isOpen) return null;
+  if (!isOpen || !mounted) return null;
 
-  return (
+  return createPortal(
     <div 
       className="fixed inset-0 z-[110] flex items-center justify-center bg-black/50 backdrop-blur-md p-4 animate-in fade-in duration-200"
       onClick={onClose}
@@ -200,6 +203,7 @@ export function LegalModal({ isOpen, onClose, initialTab = "tos" }: LegalModalPr
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

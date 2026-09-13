@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { useIDKitRequest, proofOfHuman, IDKitResult } from "@worldcoin/idkit";
+import React, { useState } from "react";
+import { IDKitRequestWidget, proofOfHuman, IDKitResult } from "@worldcoin/idkit";
 import { usePublicClient } from "wagmi";
 import { decodeAbiParameters, encodePacked, keccak256 } from "viem";
 import { WORLD_ID_ACTION, WORLD_ID_APP_ID, WORLD_ID_ROUTER_ADDRESS, WORLD_ID_ROUTER_ABI } from "@/lib/config";
@@ -23,6 +23,7 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
   const [nullifierHash, setNullifierHash] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isVerifying, setIsVerifying] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const publicClient = usePublicClient();
 
@@ -79,28 +80,11 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const { open, isSuccess, result } = useIDKitRequest({
-    app_id: WORLD_ID_APP_ID as `app_${string}`,
-    action: WORLD_ID_ACTION,
-    preset: proofOfHuman(),
-    allow_legacy_proofs: false,
-    rp_context: "rb-town",
-  } as never); // use never to bypass complex union type mismatch if properties differ
-
-  useEffect(() => {
-    if (isSuccess && result && !isVerified && !isVerifying) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      handleVerify(result).then(() => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        setNullifierHash((result as any).nullifier_hash);
-        setIsVerified(true);
-      }).catch((e) => {
-        // Error is already set in handleVerify
-        console.error(e);
-      });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isSuccess, result, isVerified, isVerifying]);
+  const onSuccess = (result: IDKitResult) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    setNullifierHash((result as any).nullifier_hash);
+    setIsVerified(true);
+  };
 
   if (isVerified && nullifierHash) {
     return <>{children}</>;
@@ -122,12 +106,25 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
       )}
 
       <button
-        onClick={open}
+        onClick={() => setIsOpen(true)}
         disabled={isVerifying}
         className="px-6 py-3 bg-black text-white rounded-md font-medium hover:bg-gray-800 disabled:opacity-50 transition-colors cursor-pointer"
       >
         {isVerifying ? "Verifying..." : "Verify with World ID"}
       </button>
+      
+      <IDKitRequestWidget
+        open={isOpen}
+        onOpenChange={setIsOpen}
+        app_id={WORLD_ID_APP_ID as `app_${string}`}
+        action={WORLD_ID_ACTION}
+        preset={proofOfHuman()}
+        allow_legacy_proofs={false}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        rp_context={"rb-town" as any}
+        handleVerify={handleVerify}
+        onSuccess={onSuccess}
+      />
 
       <p className="text-xs text-gray-400 mt-4 text-center">
         Note: Each World ID can verify only once for this action (1-person-1-response).

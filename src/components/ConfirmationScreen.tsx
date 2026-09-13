@@ -19,6 +19,7 @@ export function ConfirmationScreen({
   commitment,
 }: ConfirmationScreenProps) {
   const [copied, setCopied] = useState(false);
+  const [showAttestationInfo, setShowAttestationInfo] = useState(false);
   const { signal } = computeRealitySignal(payload);
 
   const getBadgeColor = (level: string) => {
@@ -30,7 +31,7 @@ export function ConfirmationScreen({
       case "LOW":
         return "bg-yellow-100 text-yellow-800 border-yellow-200";
       default:
-        return "bg-gray-100 text-gray-800 border-gray-200";
+        return "bg-emerald-100 text-emerald-800 border-emerald-200";
     }
   };
 
@@ -50,7 +51,6 @@ export function ConfirmationScreen({
       payload,
       commitment,
       attestationUid: attestationUID,
-      network: "sepolia",
     };
 
     const blob = new Blob([JSON.stringify(receiptData, null, 2)], {
@@ -59,7 +59,7 @@ export function ConfirmationScreen({
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `reality-signal-receipt-${Math.floor(Date.now() / 1000)}.json`;
+    a.download = `lived-reality-receipt-${Math.floor(Date.now() / 1000)}.json`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -71,8 +71,8 @@ export function ConfirmationScreen({
   const easScanUrl = `https://sepolia.easscan.org/attestation/${attestationUID}`;
 
   return (
-    <div className="max-w-2xl mx-auto bg-white p-6 sm:p-10 border border-gray-200 rounded-lg shadow-sm text-center mt-12">
-      <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+    <div className="max-w-2xl mx-auto bg-white dark:bg-slate-900 p-6 sm:p-10 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl text-center mt-12">
+      <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6 border border-emerald-200 dark:border-emerald-800">
         <svg
           className="w-8 h-8"
           fill="none"
@@ -89,37 +89,38 @@ export function ConfirmationScreen({
         </svg>
       </div>
 
-      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
         Submission Confirmed
       </h2>
-      <p className="text-gray-600 mb-8 max-w-md mx-auto">
-        Your Reality Signal has been successfully attested on the Sepolia
-        blockchain.
+      <p className="text-slate-600 dark:text-slate-300 mb-8 max-w-md mx-auto leading-relaxed">
+        Your report of lived reality has been successfully attested on-chain.
       </p>
 
-      <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8 text-left space-y-4">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-gray-200">
-          <span className="text-sm font-medium text-gray-500">
-            Reality Signal
+      <div className="bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 rounded-xl p-6 mb-8 text-left space-y-4">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-slate-200 dark:border-slate-700/60">
+          <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+            Lived Reality Status
           </span>
           <span
             className={`mt-1 sm:mt-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold border ${getBadgeColor(
               signal
             )}`}
           >
-            {signal}
+            {signal === "none" ? "Aligned" : signal}
           </span>
         </div>
 
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-gray-200">
-          <span className="text-sm font-medium text-gray-500">Commitment</span>
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 border-b border-slate-200 dark:border-slate-700/60">
+          <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+            Commitment
+          </span>
           <div className="mt-1 sm:mt-0 flex items-center space-x-2">
-            <span className="text-sm font-mono text-gray-800 bg-gray-200 px-2 py-1 rounded">
+            <span className="text-sm font-mono text-slate-800 dark:text-slate-200 bg-slate-200 dark:bg-slate-700 px-2.5 py-1 rounded-lg">
               {truncatedCommitment}
             </span>
             <button
               onClick={handleCopy}
-              className="text-indigo-600 hover:text-indigo-800 text-sm font-medium transition-colors"
+              className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 text-sm font-semibold transition-colors cursor-pointer"
             >
               {copied ? "Copied!" : "Copy"}
             </button>
@@ -127,14 +128,45 @@ export function ConfirmationScreen({
         </div>
 
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2">
-          <span className="text-sm font-medium text-gray-500">
-            Attestation
-          </span>
+          <div className="flex items-center gap-1.5 relative">
+            <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+              Attestation
+            </span>
+            <div className="relative group inline-flex items-center">
+              <button
+                type="button"
+                onClick={() => setShowAttestationInfo(!showAttestationInfo)}
+                className="text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors focus:outline-none cursor-pointer"
+                aria-label="What is an Attestation?"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </button>
+
+              {/* Tooltip Popup */}
+              <div
+                className={`absolute bottom-full left-0 sm:left-1/2 sm:-translate-x-1/2 mb-2 w-72 p-3 bg-slate-900 dark:bg-slate-800 text-slate-100 text-xs rounded-xl shadow-xl border border-slate-700 transition-all z-30 ${
+                  showAttestationInfo
+                    ? "opacity-100 pointer-events-auto"
+                    : "opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto"
+                }`}
+              >
+                <p className="font-bold mb-1 text-indigo-300 flex items-center justify-between">
+                  <span>What is an Attestation?</span>
+                </p>
+                <p className="leading-relaxed text-slate-300">
+                  An on-chain attestation is an immutable cryptographic record registered via Ethereum Attestation Service (EAS). It permanently anchors your ground-truth report on the blockchain while preserving your privacy.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <a
             href={easScanUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-1 sm:mt-0 text-sm font-medium text-indigo-600 hover:text-indigo-800 flex items-center transition-colors"
+            className="mt-1 sm:mt-0 text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 flex items-center transition-colors cursor-pointer"
           >
             View on EASscan
             <svg
@@ -158,17 +190,18 @@ export function ConfirmationScreen({
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         <button
           onClick={handleDownload}
-          className="w-full sm:w-auto px-6 py-3 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
+          className="w-full sm:w-auto px-6 py-3.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl text-sm font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors cursor-pointer"
         >
           Download Receipt (JSON)
         </button>
         <Link
           href="/observatory"
-          className="w-full sm:w-auto px-6 py-3 bg-indigo-600 border border-transparent rounded-md text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
+          className="w-full sm:w-auto px-6 py-3.5 bg-indigo-600 border border-transparent rounded-xl text-sm font-bold text-white hover:bg-indigo-500 active:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors shadow-lg shadow-indigo-600/20"
         >
-          See your signal in the Observatory
+          See your report in the Observatory
         </Link>
       </div>
     </div>
   );
 }
+

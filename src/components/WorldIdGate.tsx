@@ -106,13 +106,22 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
       )}
 
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={() => {
+          setIsVerifying(true);
+          // Simulate the time it takes to scan and verify for the demo
+          setTimeout(() => {
+            setNullifierHash("0x" + Date.now().toString(16));
+            setIsVerified(true);
+            setIsVerifying(false);
+          }, 1500);
+        }}
         disabled={isVerifying}
         className="px-6 py-3 bg-black text-white rounded-md font-medium hover:bg-gray-800 disabled:opacity-50 transition-colors cursor-pointer"
       >
         {isVerifying ? "Verifying..." : "Verify with World ID"}
       </button>
       
+      {/* DEMO MOCK: IDKitRequestWidget is disabled temporarily so you can record your tutorial video without a real World App scan.
       <IDKitRequestWidget
         open={isOpen}
         onOpenChange={setIsOpen}
@@ -125,6 +134,7 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
         handleVerify={handleVerify}
         onSuccess={onSuccess}
       />
+      */}
 
       <p className="text-xs text-gray-400 mt-4 text-center">
         Note: Each World ID can verify only once for this action (1-person-1-response).

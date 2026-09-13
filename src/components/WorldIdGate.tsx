@@ -92,16 +92,16 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm max-w-md mx-auto mt-12">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800">Verify I&apos;m Human</h2>
-      <p className="text-gray-600 text-center mb-6">
+    <div className="flex flex-col items-center justify-center p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl max-w-md mx-auto mt-8">
+      <h2 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Verify I&apos;m Human</h2>
+      <p className="text-slate-600 dark:text-slate-300 text-center mb-6 text-sm leading-relaxed">
         To submit your Reality Signal, please verify your humanity with World ID.
         This ensures each citizen&apos;s voice is counted exactly once. Your data
         remains anonymous.
       </p>
 
       {error && (
-        <div className="mb-4 p-3 bg-red-100 text-red-700 rounded w-full text-sm">
+        <div className="mb-4 p-3 bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 rounded-xl w-full text-sm">
           {error}
         </div>
       )}
@@ -109,7 +109,7 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
       <button
         onClick={() => setIsOpen(true)}
         disabled={isVerifying}
-        className="px-6 py-3 bg-black text-white rounded-md font-medium hover:bg-gray-800 disabled:opacity-50 transition-colors cursor-pointer"
+        className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-bold shadow-lg shadow-indigo-500/20 disabled:opacity-50 transition-all cursor-pointer"
       >
         {isVerifying ? "Verifying..." : "Verify with World ID"}
       </button>
@@ -124,7 +124,7 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
               setIsVerifying(false);
             }, 1000);
           }}
-          className="mt-4 px-6 py-2 bg-indigo-100 text-indigo-700 rounded-md font-medium hover:bg-indigo-200 transition-colors cursor-pointer text-sm border border-indigo-200"
+          className="mt-4 px-6 py-2 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 rounded-xl font-semibold hover:bg-indigo-500/20 transition-colors cursor-pointer text-sm border border-indigo-500/20"
         >
           Demo Bypass (Simulate Success)
         </button>
@@ -147,7 +147,7 @@ export function WorldIdGate({ children }: { children: React.ReactNode }) {
         }}
       />
 
-      <p className="text-xs text-gray-400 mt-4 text-center">
+      <p className="text-xs text-slate-400 dark:text-slate-500 mt-5 text-center">
         Note: Each World ID can verify only once for this action (1-person-1-response).
         If you have already verified, World App will notify you that you cannot verify again.
       </p>

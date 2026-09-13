@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Indonesia Reality Bridge | Lived Reality Layer",
+  title: "Reality Bridge",
   description:
-    "A privacy-preserving citizen data-quality layer — bridging official BPS statistics with lived reality across Indonesia.",
+    "A privacy-preserving citizen data-quality layer — bridge the gap between Recorded Reality and Lived Reality.",
   icons: {
     icon: [
       { url: "/favicon.ico" },

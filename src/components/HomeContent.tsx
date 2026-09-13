@@ -32,8 +32,8 @@ export function HomeContent() {
           className="relative rounded-2xl border border-white/10 shadow-2xl object-cover"
         />
       </div>
-      <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs text-indigo-400 font-semibold">
-        🇮🇩 Indonesia Reality Bridge
+      <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs text-indigo-400">
+        Reality Bridge
       </div>
       <h2 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl text-white">
         Bridging Recorded Data with{" "}

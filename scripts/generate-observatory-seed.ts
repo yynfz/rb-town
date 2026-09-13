@@ -9,7 +9,7 @@ import { CompletedSubmission, Payload } from "../src/lib/types";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const NUM_SUBMISSIONS = 500;
+const NUM_SUBMISSIONS = 2500;
 const JAVA_PROVINCES = [31, 32, 33, 34, 35, 36]; // Codes for Java provinces
 
 function getRandomRegionCode(): string {

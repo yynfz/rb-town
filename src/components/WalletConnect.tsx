@@ -30,7 +30,7 @@ const Icons = {
   Wallet: (props: any) => <svg {...props} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 12V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2v-5m-4 0h4m-4 0a2 2 0 100-4 2 2 0 000 4z" /></svg>
 };
 
-export function WalletConnect() {
+export function WalletConnect({ customTrigger }: { customTrigger?: (onClick: () => void) => React.ReactNode } = {}) {
   const { address, isConnected, chain, connector: activeConnector } = useAccount();
   const { connect, connectors, isPending } = useConnect();
   const { disconnect } = useDisconnect();
@@ -216,40 +216,44 @@ export function WalletConnect() {
 
   return (
     <>
-      <button
-        onClick={handlePrimaryClick}
-        disabled={isPending}
-        className={`group relative flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all shadow-sm
-          ${isConnected 
-            ? isWrongNetwork
-              ? "bg-amber-100 text-amber-700 hover:bg-amber-200 dark:bg-amber-500/10 dark:text-amber-400 dark:hover:bg-amber-500/20"
-              : "bg-gray-100 text-gray-900 hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
-            : "bg-indigo-600 text-white hover:bg-indigo-500 active:bg-indigo-700 shadow-indigo-600/20"}
-        `}
-      >
-        {isPending ? (
-          <span className="flex items-center gap-2">
-            <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-            </svg>
-            Connecting...
-          </span>
-        ) : isConnected && address ? (
-          isWrongNetwork ? (
-            <span className="flex items-center gap-2">Wrong Network</span>
+      {customTrigger ? (
+        customTrigger(handlePrimaryClick)
+      ) : (
+        <button
+          onClick={handlePrimaryClick}
+          disabled={isPending}
+          className={`group relative flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all shadow-sm
+            ${isConnected 
+              ? isWrongNetwork
+                ? "bg-amber-100 text-amber-700 hover:bg-amber-200 dark:bg-amber-500/10 dark:text-amber-400 dark:hover:bg-amber-500/20"
+                : "bg-gray-100 text-gray-900 hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+              : "bg-indigo-600 text-white hover:bg-indigo-500 active:bg-indigo-700 shadow-indigo-600/20"}
+          `}
+        >
+          {isPending ? (
+            <span className="flex items-center gap-2">
+              <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              </svg>
+              Connecting...
+            </span>
+          ) : isConnected && address ? (
+            isWrongNetwork ? (
+              <span className="flex items-center gap-2">Wrong Network</span>
+            ) : (
+              <span className="flex items-center gap-2">
+                <div className="w-5 h-5 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 mr-1" />
+                {formatAddress(address)}
+              </span>
+            )
           ) : (
             <span className="flex items-center gap-2">
-              <div className="w-5 h-5 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 mr-1" />
-              {formatAddress(address)}
+              Connect Wallet
             </span>
-          )
-        ) : (
-          <span className="flex items-center gap-2">
-            Connect Wallet
-          </span>
-        )}
-      </button>
+          )}
+        </button>
+      )}
 
       {mounted && isConnectModalOpen && createPortal(
         <div className="fixed inset-0 z-[100]" onClick={() => setIsConnectModalOpen(false)}>

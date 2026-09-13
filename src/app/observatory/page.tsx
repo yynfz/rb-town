@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ObservatoryDashboard } from "@/components/ObservatoryDashboard";
 import type { ObservatoryState } from "@/lib/types";
 import seedDataRaw from "../../../data/observatory-seed.json";
+import { ReportAction } from "./ReportAction";
 
 // Cast imported JSON to the strictly typed state
 const seedData = seedDataRaw as ObservatoryState;
@@ -27,12 +28,7 @@ export default function ObservatoryPage() {
             <p className="text-xs text-gray-500">Observatory View</p>
           </div>
         </Link>
-        <Link
-          href="/"
-          className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
-        >
-          Submit a Signal &rarr;
-        </Link>
+        <ReportAction />
       </header>
 
       <div className="flex-1 w-full pb-12">

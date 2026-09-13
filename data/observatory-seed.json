@@ -1,1597 +1,1639 @@
 {
-  "totalSubmissions": 500,
+  "totalSubmissions": 2500,
   "bySignal": {
-    "none": 89,
-    "LOW": 135,
-    "MEDIUM": 223,
-    "HIGH": 53
+    "none": 482,
+    "LOW": 642,
+    "MEDIUM": 1142,
+    "HIGH": 234
   },
   "byCategory": {
     "assets_utilities": {
-      "worsened": 68,
-      "unchanged": 399,
-      "improved": 33
+      "worsened": 339,
+      "unchanged": 1928,
+      "improved": 233
     },
     "education": {
-      "worsened": 72,
-      "unchanged": 401,
-      "improved": 27
+      "worsened": 391,
+      "unchanged": 1861,
+      "improved": 248
     },
     "employment_income": {
-      "worsened": 216,
-      "unchanged": 264,
-      "improved": 20
+      "worsened": 1103,
+      "unchanged": 1275,
+      "improved": 122
     },
     "health": {
-      "worsened": 77,
-      "unchanged": 379,
-      "improved": 44
+      "worsened": 400,
+      "unchanged": 1852,
+      "improved": 248
     },
     "household_composition": {
-      "worsened": 200,
-      "unchanged": 271,
-      "improved": 29
+      "worsened": 826,
+      "unchanged": 1537,
+      "improved": 137
     },
     "housing_conditions": {
-      "worsened": 77,
-      "unchanged": 365,
-      "improved": 58
+      "worsened": 388,
+      "unchanged": 1848,
+      "improved": 264
     }
   },
   "byRegion": {
-    "11": 6,
-    "12": 6,
-    "13": 4,
-    "14": 8,
-    "16": 3,
-    "17": 6,
-    "18": 8,
-    "19": 6,
-    "21": 10,
-    "31": 53,
-    "32": 48,
-    "33": 60,
-    "34": 42,
-    "35": 42,
-    "36": 48,
-    "51": 4,
-    "52": 6,
-    "53": 10,
-    "61": 6,
-    "62": 5,
-    "63": 8,
-    "64": 5,
-    "65": 9,
-    "71": 11,
-    "72": 5,
-    "73": 7,
-    "74": 8,
-    "75": 4,
-    "76": 10,
-    "81": 4,
-    "82": 7,
-    "91": 15,
-    "92": 7,
-    "93": 4,
-    "94": 5,
-    "95": 4,
-    "96": 6
+    "11": 30,
+    "12": 24,
+    "13": 31,
+    "14": 34,
+    "15": 34,
+    "16": 29,
+    "17": 31,
+    "18": 31,
+    "19": 40,
+    "21": 15,
+    "31": 248,
+    "32": 263,
+    "33": 250,
+    "34": 240,
+    "35": 264,
+    "36": 263,
+    "51": 38,
+    "52": 33,
+    "53": 26,
+    "61": 35,
+    "62": 29,
+    "63": 26,
+    "64": 36,
+    "65": 32,
+    "71": 33,
+    "72": 22,
+    "73": 28,
+    "74": 36,
+    "75": 34,
+    "76": 21,
+    "81": 25,
+    "82": 34,
+    "91": 37,
+    "92": 27,
+    "93": 27,
+    "94": 33,
+    "95": 35,
+    "96": 26
   },
   "byRegionDetail": {
     "11": {
-      "totalSubmissions": 6,
+      "totalSubmissions": 30,
       "bySignal": {
-        "none": 2,
-        "LOW": 0,
-        "MEDIUM": 2,
-        "HIGH": 2
+        "none": 7,
+        "LOW": 10,
+        "MEDIUM": 12,
+        "HIGH": 1
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 3,
-          "unchanged": 2,
+          "worsened": 4,
+          "unchanged": 25,
           "improved": 1
         },
         "education": {
-          "worsened": 1,
-          "unchanged": 5,
-          "improved": 0
+          "worsened": 3,
+          "unchanged": 24,
+          "improved": 3
         },
         "employment_income": {
-          "worsened": 2,
-          "unchanged": 4,
+          "worsened": 12,
+          "unchanged": 18,
           "improved": 0
         },
         "health": {
-          "worsened": 0,
-          "unchanged": 6,
-          "improved": 0
+          "worsened": 1,
+          "unchanged": 26,
+          "improved": 3
         },
         "household_composition": {
-          "worsened": 3,
-          "unchanged": 3,
-          "improved": 0
+          "worsened": 9,
+          "unchanged": 20,
+          "improved": 1
         },
         "housing_conditions": {
-          "worsened": 1,
-          "unchanged": 4,
-          "improved": 1
+          "worsened": 2,
+          "unchanged": 25,
+          "improved": 3
         }
       }
     },
     "12": {
-      "totalSubmissions": 6,
+      "totalSubmissions": 24,
       "bySignal": {
-        "none": 0,
-        "LOW": 3,
-        "MEDIUM": 3,
+        "none": 7,
+        "LOW": 6,
+        "MEDIUM": 11,
         "HIGH": 0
       },
       "byCategory": {
         "assets_utilities": {
           "worsened": 1,
-          "unchanged": 5,
-          "improved": 0
+          "unchanged": 19,
+          "improved": 4
         },
         "education": {
-          "worsened": 2,
-          "unchanged": 4,
+          "worsened": 4,
+          "unchanged": 20,
           "improved": 0
         },
         "employment_income": {
-          "worsened": 2,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 10,
+          "unchanged": 13,
+          "improved": 1
         },
         "health": {
-          "worsened": 2,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 3,
+          "unchanged": 18,
+          "improved": 3
         },
         "household_composition": {
-          "worsened": 3,
-          "unchanged": 3,
-          "improved": 0
+          "worsened": 4,
+          "unchanged": 19,
+          "improved": 1
         },
         "housing_conditions": {
-          "worsened": 0,
-          "unchanged": 6,
-          "improved": 0
+          "worsened": 2,
+          "unchanged": 21,
+          "improved": 1
         }
       }
     },
     "13": {
-      "totalSubmissions": 4,
+      "totalSubmissions": 31,
       "bySignal": {
-        "none": 1,
-        "LOW": 2,
-        "MEDIUM": 0,
-        "HIGH": 1
+        "none": 2,
+        "LOW": 9,
+        "MEDIUM": 18,
+        "HIGH": 2
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 3,
-          "improved": 0
+          "worsened": 3,
+          "unchanged": 23,
+          "improved": 5
         },
         "education": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 6,
+          "unchanged": 20,
+          "improved": 5
         },
         "employment_income": {
-          "worsened": 1,
-          "unchanged": 2,
-          "improved": 1
+          "worsened": 17,
+          "unchanged": 12,
+          "improved": 2
         },
         "health": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 3,
+          "unchanged": 27,
+          "improved": 1
         },
         "household_composition": {
-          "worsened": 2,
-          "unchanged": 2,
-          "improved": 0
+          "worsened": 10,
+          "unchanged": 20,
+          "improved": 1
         },
         "housing_conditions": {
-          "worsened": 1,
-          "unchanged": 3,
-          "improved": 0
+          "worsened": 5,
+          "unchanged": 22,
+          "improved": 4
         }
       }
     },
     "14": {
-      "totalSubmissions": 8,
+      "totalSubmissions": 34,
       "bySignal": {
-        "none": 1,
-        "LOW": 3,
-        "MEDIUM": 4,
+        "none": 7,
+        "LOW": 13,
+        "MEDIUM": 14,
         "HIGH": 0
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 0,
-          "unchanged": 7,
-          "improved": 1
-        },
-        "education": {
-          "worsened": 0,
-          "unchanged": 7,
-          "improved": 1
-        },
-        "employment_income": {
-          "worsened": 3,
-          "unchanged": 3,
-          "improved": 2
-        },
-        "health": {
-          "worsened": 1,
-          "unchanged": 6,
-          "improved": 1
-        },
-        "household_composition": {
-          "worsened": 4,
-          "unchanged": 3,
-          "improved": 1
-        },
-        "housing_conditions": {
-          "worsened": 2,
-          "unchanged": 5,
-          "improved": 1
-        }
-      }
-    },
-    "16": {
-      "totalSubmissions": 3,
-      "bySignal": {
-        "none": 0,
-        "LOW": 3,
-        "MEDIUM": 0,
-        "HIGH": 0
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 0,
-          "unchanged": 3,
-          "improved": 0
-        },
-        "education": {
-          "worsened": 1,
-          "unchanged": 2,
-          "improved": 0
-        },
-        "employment_income": {
-          "worsened": 0,
-          "unchanged": 3,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 1,
-          "unchanged": 2,
-          "improved": 0
-        },
-        "household_composition": {
-          "worsened": 1,
-          "unchanged": 2,
-          "improved": 0
-        },
-        "housing_conditions": {
-          "worsened": 0,
-          "unchanged": 2,
-          "improved": 1
-        }
-      }
-    },
-    "17": {
-      "totalSubmissions": 6,
-      "bySignal": {
-        "none": 1,
-        "LOW": 2,
-        "MEDIUM": 3,
-        "HIGH": 0
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 0,
-          "unchanged": 5,
-          "improved": 1
-        },
-        "education": {
-          "worsened": 3,
-          "unchanged": 3,
-          "improved": 0
-        },
-        "employment_income": {
-          "worsened": 2,
-          "unchanged": 4,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 1,
-          "unchanged": 4,
-          "improved": 1
-        },
-        "household_composition": {
-          "worsened": 2,
-          "unchanged": 4,
-          "improved": 0
-        },
-        "housing_conditions": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 2
-        }
-      }
-    },
-    "18": {
-      "totalSubmissions": 8,
-      "bySignal": {
-        "none": 1,
-        "LOW": 1,
-        "MEDIUM": 4,
-        "HIGH": 2
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 2,
-          "unchanged": 6,
-          "improved": 0
-        },
-        "education": {
-          "worsened": 2,
-          "unchanged": 5,
-          "improved": 1
-        },
-        "employment_income": {
-          "worsened": 5,
-          "unchanged": 3,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 3,
-          "unchanged": 3,
-          "improved": 2
-        },
-        "household_composition": {
-          "worsened": 2,
-          "unchanged": 6,
-          "improved": 0
-        },
-        "housing_conditions": {
-          "worsened": 3,
-          "unchanged": 4,
-          "improved": 1
-        }
-      }
-    },
-    "19": {
-      "totalSubmissions": 6,
-      "bySignal": {
-        "none": 1,
-        "LOW": 2,
-        "MEDIUM": 2,
-        "HIGH": 1
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 5,
-          "improved": 0
-        },
-        "education": {
-          "worsened": 0,
-          "unchanged": 6,
-          "improved": 0
-        },
-        "employment_income": {
-          "worsened": 3,
-          "unchanged": 2,
-          "improved": 1
-        },
-        "health": {
-          "worsened": 0,
-          "unchanged": 5,
-          "improved": 1
-        },
-        "household_composition": {
-          "worsened": 2,
-          "unchanged": 4,
-          "improved": 0
-        },
-        "housing_conditions": {
-          "worsened": 2,
-          "unchanged": 2,
-          "improved": 2
-        }
-      }
-    },
-    "21": {
-      "totalSubmissions": 10,
-      "bySignal": {
-        "none": 1,
-        "LOW": 3,
-        "MEDIUM": 6,
-        "HIGH": 0
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 9,
-          "improved": 0
-        },
-        "education": {
-          "worsened": 1,
-          "unchanged": 9,
-          "improved": 0
-        },
-        "employment_income": {
-          "worsened": 4,
-          "unchanged": 5,
-          "improved": 1
-        },
-        "health": {
-          "worsened": 2,
-          "unchanged": 8,
-          "improved": 0
-        },
-        "household_composition": {
           "worsened": 7,
-          "unchanged": 2,
-          "improved": 1
-        },
-        "housing_conditions": {
-          "worsened": 0,
-          "unchanged": 10,
-          "improved": 0
-        }
-      }
-    },
-    "31": {
-      "totalSubmissions": 53,
-      "bySignal": {
-        "none": 8,
-        "LOW": 18,
-        "MEDIUM": 25,
-        "HIGH": 2
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 6,
-          "unchanged": 43,
-          "improved": 4
-        },
-        "education": {
-          "worsened": 10,
-          "unchanged": 40,
-          "improved": 3
-        },
-        "employment_income": {
-          "worsened": 17,
-          "unchanged": 32,
-          "improved": 4
-        },
-        "health": {
-          "worsened": 7,
-          "unchanged": 42,
-          "improved": 4
-        },
-        "household_composition": {
-          "worsened": 24,
-          "unchanged": 27,
-          "improved": 2
-        },
-        "housing_conditions": {
-          "worsened": 4,
-          "unchanged": 43,
-          "improved": 6
-        }
-      }
-    },
-    "32": {
-      "totalSubmissions": 48,
-      "bySignal": {
-        "none": 6,
-        "LOW": 16,
-        "MEDIUM": 20,
-        "HIGH": 6
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 2,
-          "unchanged": 44,
-          "improved": 2
-        },
-        "education": {
-          "worsened": 9,
-          "unchanged": 39,
-          "improved": 0
-        },
-        "employment_income": {
-          "worsened": 21,
-          "unchanged": 26,
-          "improved": 1
-        },
-        "health": {
-          "worsened": 7,
-          "unchanged": 37,
-          "improved": 4
-        },
-        "household_composition": {
-          "worsened": 19,
-          "unchanged": 26,
-          "improved": 3
-        },
-        "housing_conditions": {
-          "worsened": 10,
-          "unchanged": 33,
-          "improved": 5
-        }
-      }
-    },
-    "33": {
-      "totalSubmissions": 60,
-      "bySignal": {
-        "none": 11,
-        "LOW": 23,
-        "MEDIUM": 20,
-        "HIGH": 6
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 11,
-          "unchanged": 45,
-          "improved": 4
-        },
-        "education": {
-          "worsened": 12,
-          "unchanged": 45,
-          "improved": 3
-        },
-        "employment_income": {
-          "worsened": 21,
-          "unchanged": 37,
-          "improved": 2
-        },
-        "health": {
-          "worsened": 9,
-          "unchanged": 48,
-          "improved": 3
-        },
-        "household_composition": {
-          "worsened": 21,
-          "unchanged": 34,
-          "improved": 5
-        },
-        "housing_conditions": {
-          "worsened": 10,
-          "unchanged": 43,
-          "improved": 7
-        }
-      }
-    },
-    "34": {
-      "totalSubmissions": 42,
-      "bySignal": {
-        "none": 6,
-        "LOW": 7,
-        "MEDIUM": 25,
-        "HIGH": 4
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 6,
-          "unchanged": 30,
-          "improved": 6
-        },
-        "education": {
-          "worsened": 5,
-          "unchanged": 35,
-          "improved": 2
-        },
-        "employment_income": {
-          "worsened": 22,
-          "unchanged": 20,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 7,
-          "unchanged": 34,
-          "improved": 1
-        },
-        "household_composition": {
-          "worsened": 17,
-          "unchanged": 23,
-          "improved": 2
-        },
-        "housing_conditions": {
-          "worsened": 8,
-          "unchanged": 29,
-          "improved": 5
-        }
-      }
-    },
-    "35": {
-      "totalSubmissions": 42,
-      "bySignal": {
-        "none": 9,
-        "LOW": 12,
-        "MEDIUM": 18,
-        "HIGH": 3
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 5,
-          "unchanged": 35,
-          "improved": 2
-        },
-        "education": {
-          "worsened": 1,
-          "unchanged": 37,
-          "improved": 4
-        },
-        "employment_income": {
-          "worsened": 18,
-          "unchanged": 21,
-          "improved": 3
-        },
-        "health": {
-          "worsened": 9,
-          "unchanged": 31,
-          "improved": 2
-        },
-        "household_composition": {
-          "worsened": 14,
           "unchanged": 25,
-          "improved": 3
-        },
-        "housing_conditions": {
-          "worsened": 6,
-          "unchanged": 31,
-          "improved": 5
-        }
-      }
-    },
-    "36": {
-      "totalSubmissions": 48,
-      "bySignal": {
-        "none": 10,
-        "LOW": 10,
-        "MEDIUM": 22,
-        "HIGH": 6
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 7,
-          "unchanged": 35,
-          "improved": 6
-        },
-        "education": {
-          "worsened": 5,
-          "unchanged": 41,
           "improved": 2
         },
+        "education": {
+          "worsened": 4,
+          "unchanged": 27,
+          "improved": 3
+        },
         "employment_income": {
-          "worsened": 25,
+          "worsened": 11,
           "unchanged": 22,
           "improved": 1
         },
         "health": {
           "worsened": 4,
-          "unchanged": 36,
-          "improved": 8
+          "unchanged": 27,
+          "improved": 3
         },
         "household_composition": {
-          "worsened": 18,
-          "unchanged": 28,
+          "worsened": 5,
+          "unchanged": 27,
           "improved": 2
         },
         "housing_conditions": {
-          "worsened": 9,
-          "unchanged": 33,
-          "improved": 6
+          "worsened": 5,
+          "unchanged": 26,
+          "improved": 3
         }
       }
     },
-    "51": {
-      "totalSubmissions": 4,
+    "15": {
+      "totalSubmissions": 34,
       "bySignal": {
-        "none": 0,
-        "LOW": 0,
-        "MEDIUM": 4,
-        "HIGH": 0
+        "none": 2,
+        "LOW": 6,
+        "MEDIUM": 22,
+        "HIGH": 4
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 3,
-          "improved": 0
+          "worsened": 4,
+          "unchanged": 28,
+          "improved": 2
         },
         "education": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 5,
+          "unchanged": 20,
+          "improved": 9
         },
         "employment_income": {
-          "worsened": 4,
-          "unchanged": 0,
-          "improved": 0
+          "worsened": 20,
+          "unchanged": 13,
+          "improved": 1
         },
         "health": {
-          "worsened": 1,
-          "unchanged": 2,
-          "improved": 1
+          "worsened": 8,
+          "unchanged": 24,
+          "improved": 2
         },
         "household_composition": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 14,
+          "unchanged": 19,
+          "improved": 1
         },
         "housing_conditions": {
-          "worsened": 0,
-          "unchanged": 3,
-          "improved": 1
+          "worsened": 7,
+          "unchanged": 23,
+          "improved": 4
         }
       }
     },
-    "52": {
-      "totalSubmissions": 6,
+    "16": {
+      "totalSubmissions": 29,
       "bySignal": {
-        "none": 0,
-        "LOW": 1,
-        "MEDIUM": 5,
-        "HIGH": 0
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 5,
-          "improved": 0
-        },
-        "education": {
-          "worsened": 0,
-          "unchanged": 5,
-          "improved": 1
-        },
-        "employment_income": {
-          "worsened": 4,
-          "unchanged": 2,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 3,
-          "unchanged": 3,
-          "improved": 0
-        },
-        "household_composition": {
-          "worsened": 1,
-          "unchanged": 5,
-          "improved": 0
-        },
-        "housing_conditions": {
-          "worsened": 1,
-          "unchanged": 4,
-          "improved": 1
-        }
-      }
-    },
-    "53": {
-      "totalSubmissions": 10,
-      "bySignal": {
-        "none": 4,
-        "LOW": 1,
-        "MEDIUM": 2,
+        "none": 5,
+        "LOW": 9,
+        "MEDIUM": 12,
         "HIGH": 3
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 3,
-          "unchanged": 7,
-          "improved": 0
+          "worsened": 5,
+          "unchanged": 18,
+          "improved": 6
         },
         "education": {
-          "worsened": 1,
-          "unchanged": 9,
-          "improved": 0
+          "worsened": 4,
+          "unchanged": 22,
+          "improved": 3
         },
         "employment_income": {
-          "worsened": 4,
-          "unchanged": 6,
-          "improved": 0
+          "worsened": 12,
+          "unchanged": 14,
+          "improved": 3
         },
         "health": {
-          "worsened": 0,
-          "unchanged": 7,
+          "worsened": 1,
+          "unchanged": 25,
           "improved": 3
         },
         "household_composition": {
-          "worsened": 4,
-          "unchanged": 6,
-          "improved": 0
+          "worsened": 14,
+          "unchanged": 14,
+          "improved": 1
         },
         "housing_conditions": {
+          "worsened": 6,
+          "unchanged": 19,
+          "improved": 4
+        }
+      }
+    },
+    "17": {
+      "totalSubmissions": 31,
+      "bySignal": {
+        "none": 7,
+        "LOW": 13,
+        "MEDIUM": 11,
+        "HIGH": 0
+      },
+      "byCategory": {
+        "assets_utilities": {
           "worsened": 1,
+          "unchanged": 26,
+          "improved": 4
+        },
+        "education": {
+          "worsened": 6,
+          "unchanged": 18,
+          "improved": 7
+        },
+        "employment_income": {
+          "worsened": 8,
+          "unchanged": 18,
+          "improved": 5
+        },
+        "health": {
+          "worsened": 4,
+          "unchanged": 23,
+          "improved": 4
+        },
+        "household_composition": {
+          "worsened": 10,
+          "unchanged": 18,
+          "improved": 3
+        },
+        "housing_conditions": {
+          "worsened": 4,
+          "unchanged": 22,
+          "improved": 5
+        }
+      }
+    },
+    "18": {
+      "totalSubmissions": 31,
+      "bySignal": {
+        "none": 9,
+        "LOW": 9,
+        "MEDIUM": 9,
+        "HIGH": 4
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 3,
+          "unchanged": 26,
+          "improved": 2
+        },
+        "education": {
+          "worsened": 3,
+          "unchanged": 25,
+          "improved": 3
+        },
+        "employment_income": {
+          "worsened": 10,
+          "unchanged": 20,
+          "improved": 1
+        },
+        "health": {
+          "worsened": 5,
+          "unchanged": 23,
+          "improved": 3
+        },
+        "household_composition": {
+          "worsened": 7,
+          "unchanged": 21,
+          "improved": 3
+        },
+        "housing_conditions": {
+          "worsened": 9,
+          "unchanged": 18,
+          "improved": 4
+        }
+      }
+    },
+    "19": {
+      "totalSubmissions": 40,
+      "bySignal": {
+        "none": 9,
+        "LOW": 14,
+        "MEDIUM": 15,
+        "HIGH": 2
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 5,
+          "unchanged": 33,
+          "improved": 2
+        },
+        "education": {
+          "worsened": 10,
+          "unchanged": 25,
+          "improved": 5
+        },
+        "employment_income": {
+          "worsened": 13,
+          "unchanged": 25,
+          "improved": 2
+        },
+        "health": {
+          "worsened": 3,
+          "unchanged": 33,
+          "improved": 4
+        },
+        "household_composition": {
+          "worsened": 12,
+          "unchanged": 26,
+          "improved": 2
+        },
+        "housing_conditions": {
+          "worsened": 3,
+          "unchanged": 32,
+          "improved": 5
+        }
+      }
+    },
+    "21": {
+      "totalSubmissions": 15,
+      "bySignal": {
+        "none": 4,
+        "LOW": 2,
+        "MEDIUM": 8,
+        "HIGH": 1
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 1,
+          "unchanged": 10,
+          "improved": 4
+        },
+        "education": {
+          "worsened": 2,
+          "unchanged": 11,
+          "improved": 2
+        },
+        "employment_income": {
+          "worsened": 7,
+          "unchanged": 7,
+          "improved": 1
+        },
+        "health": {
+          "worsened": 3,
+          "unchanged": 11,
+          "improved": 1
+        },
+        "household_composition": {
+          "worsened": 4,
           "unchanged": 9,
+          "improved": 2
+        },
+        "housing_conditions": {
+          "worsened": 2,
+          "unchanged": 9,
+          "improved": 4
+        }
+      }
+    },
+    "31": {
+      "totalSubmissions": 248,
+      "bySignal": {
+        "none": 49,
+        "LOW": 64,
+        "MEDIUM": 107,
+        "HIGH": 28
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 32,
+          "unchanged": 196,
+          "improved": 20
+        },
+        "education": {
+          "worsened": 43,
+          "unchanged": 181,
+          "improved": 24
+        },
+        "employment_income": {
+          "worsened": 115,
+          "unchanged": 123,
+          "improved": 10
+        },
+        "health": {
+          "worsened": 32,
+          "unchanged": 196,
+          "improved": 20
+        },
+        "household_composition": {
+          "worsened": 78,
+          "unchanged": 157,
+          "improved": 13
+        },
+        "housing_conditions": {
+          "worsened": 38,
+          "unchanged": 186,
+          "improved": 24
+        }
+      }
+    },
+    "32": {
+      "totalSubmissions": 263,
+      "bySignal": {
+        "none": 59,
+        "LOW": 70,
+        "MEDIUM": 106,
+        "HIGH": 28
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 32,
+          "unchanged": 204,
+          "improved": 27
+        },
+        "education": {
+          "worsened": 41,
+          "unchanged": 198,
+          "improved": 24
+        },
+        "employment_income": {
+          "worsened": 113,
+          "unchanged": 141,
+          "improved": 9
+        },
+        "health": {
+          "worsened": 40,
+          "unchanged": 194,
+          "improved": 29
+        },
+        "household_composition": {
+          "worsened": 87,
+          "unchanged": 162,
+          "improved": 14
+        },
+        "housing_conditions": {
+          "worsened": 37,
+          "unchanged": 197,
+          "improved": 29
+        }
+      }
+    },
+    "33": {
+      "totalSubmissions": 250,
+      "bySignal": {
+        "none": 46,
+        "LOW": 61,
+        "MEDIUM": 123,
+        "HIGH": 20
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 36,
+          "unchanged": 198,
+          "improved": 16
+        },
+        "education": {
+          "worsened": 43,
+          "unchanged": 178,
+          "improved": 29
+        },
+        "employment_income": {
+          "worsened": 109,
+          "unchanged": 125,
+          "improved": 16
+        },
+        "health": {
+          "worsened": 38,
+          "unchanged": 191,
+          "improved": 21
+        },
+        "household_composition": {
+          "worsened": 80,
+          "unchanged": 158,
+          "improved": 12
+        },
+        "housing_conditions": {
+          "worsened": 45,
+          "unchanged": 174,
+          "improved": 31
+        }
+      }
+    },
+    "34": {
+      "totalSubmissions": 240,
+      "bySignal": {
+        "none": 53,
+        "LOW": 66,
+        "MEDIUM": 97,
+        "HIGH": 24
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 31,
+          "unchanged": 181,
+          "improved": 28
+        },
+        "education": {
+          "worsened": 30,
+          "unchanged": 181,
+          "improved": 29
+        },
+        "employment_income": {
+          "worsened": 104,
+          "unchanged": 122,
+          "improved": 14
+        },
+        "health": {
+          "worsened": 38,
+          "unchanged": 170,
+          "improved": 32
+        },
+        "household_composition": {
+          "worsened": 80,
+          "unchanged": 145,
+          "improved": 15
+        },
+        "housing_conditions": {
+          "worsened": 35,
+          "unchanged": 179,
+          "improved": 26
+        }
+      }
+    },
+    "35": {
+      "totalSubmissions": 264,
+      "bySignal": {
+        "none": 40,
+        "LOW": 64,
+        "MEDIUM": 137,
+        "HIGH": 23
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 34,
+          "unchanged": 206,
+          "improved": 24
+        },
+        "education": {
+          "worsened": 28,
+          "unchanged": 209,
+          "improved": 27
+        },
+        "employment_income": {
+          "worsened": 121,
+          "unchanged": 132,
+          "improved": 11
+        },
+        "health": {
+          "worsened": 57,
+          "unchanged": 188,
+          "improved": 19
+        },
+        "household_composition": {
+          "worsened": 102,
+          "unchanged": 154,
+          "improved": 8
+        },
+        "housing_conditions": {
+          "worsened": 43,
+          "unchanged": 191,
+          "improved": 30
+        }
+      }
+    },
+    "36": {
+      "totalSubmissions": 263,
+      "bySignal": {
+        "none": 51,
+        "LOW": 60,
+        "MEDIUM": 128,
+        "HIGH": 24
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 40,
+          "unchanged": 201,
+          "improved": 22
+        },
+        "education": {
+          "worsened": 46,
+          "unchanged": 202,
+          "improved": 15
+        },
+        "employment_income": {
+          "worsened": 119,
+          "unchanged": 131,
+          "improved": 13
+        },
+        "health": {
+          "worsened": 43,
+          "unchanged": 192,
+          "improved": 28
+        },
+        "household_composition": {
+          "worsened": 86,
+          "unchanged": 159,
+          "improved": 18
+        },
+        "housing_conditions": {
+          "worsened": 33,
+          "unchanged": 205,
+          "improved": 25
+        }
+      }
+    },
+    "51": {
+      "totalSubmissions": 38,
+      "bySignal": {
+        "none": 6,
+        "LOW": 9,
+        "MEDIUM": 20,
+        "HIGH": 3
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 11,
+          "unchanged": 21,
+          "improved": 6
+        },
+        "education": {
+          "worsened": 5,
+          "unchanged": 30,
+          "improved": 3
+        },
+        "employment_income": {
+          "worsened": 17,
+          "unchanged": 19,
+          "improved": 2
+        },
+        "health": {
+          "worsened": 7,
+          "unchanged": 30,
+          "improved": 1
+        },
+        "household_composition": {
+          "worsened": 14,
+          "unchanged": 20,
+          "improved": 4
+        },
+        "housing_conditions": {
+          "worsened": 3,
+          "unchanged": 32,
+          "improved": 3
+        }
+      }
+    },
+    "52": {
+      "totalSubmissions": 33,
+      "bySignal": {
+        "none": 6,
+        "LOW": 8,
+        "MEDIUM": 15,
+        "HIGH": 4
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 7,
+          "unchanged": 26,
           "improved": 0
+        },
+        "education": {
+          "worsened": 8,
+          "unchanged": 24,
+          "improved": 1
+        },
+        "employment_income": {
+          "worsened": 14,
+          "unchanged": 19,
+          "improved": 0
+        },
+        "health": {
+          "worsened": 10,
+          "unchanged": 18,
+          "improved": 5
+        },
+        "household_composition": {
+          "worsened": 9,
+          "unchanged": 23,
+          "improved": 1
+        },
+        "housing_conditions": {
+          "worsened": 5,
+          "unchanged": 23,
+          "improved": 5
+        }
+      }
+    },
+    "53": {
+      "totalSubmissions": 26,
+      "bySignal": {
+        "none": 4,
+        "LOW": 6,
+        "MEDIUM": 12,
+        "HIGH": 4
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 2,
+          "unchanged": 21,
+          "improved": 3
+        },
+        "education": {
+          "worsened": 6,
+          "unchanged": 17,
+          "improved": 3
+        },
+        "employment_income": {
+          "worsened": 14,
+          "unchanged": 12,
+          "improved": 0
+        },
+        "health": {
+          "worsened": 2,
+          "unchanged": 20,
+          "improved": 4
+        },
+        "household_composition": {
+          "worsened": 14,
+          "unchanged": 11,
+          "improved": 1
+        },
+        "housing_conditions": {
+          "worsened": 3,
+          "unchanged": 20,
+          "improved": 3
         }
       }
     },
     "61": {
-      "totalSubmissions": 6,
+      "totalSubmissions": 35,
       "bySignal": {
-        "none": 2,
-        "LOW": 0,
-        "MEDIUM": 3,
-        "HIGH": 1
+        "none": 6,
+        "LOW": 11,
+        "MEDIUM": 13,
+        "HIGH": 5
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 5,
-          "improved": 0
+          "worsened": 5,
+          "unchanged": 23,
+          "improved": 7
         },
         "education": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 2
+          "worsened": 6,
+          "unchanged": 26,
+          "improved": 3
         },
         "employment_income": {
-          "worsened": 4,
-          "unchanged": 2,
+          "worsened": 16,
+          "unchanged": 19,
           "improved": 0
         },
         "health": {
-          "worsened": 1,
-          "unchanged": 5,
-          "improved": 0
+          "worsened": 5,
+          "unchanged": 23,
+          "improved": 7
         },
         "household_composition": {
-          "worsened": 0,
-          "unchanged": 6,
-          "improved": 0
+          "worsened": 14,
+          "unchanged": 19,
+          "improved": 2
         },
         "housing_conditions": {
-          "worsened": 2,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 6,
+          "unchanged": 26,
+          "improved": 3
         }
       }
     },
     "62": {
-      "totalSubmissions": 5,
+      "totalSubmissions": 29,
       "bySignal": {
-        "none": 1,
-        "LOW": 2,
-        "MEDIUM": 2,
-        "HIGH": 0
+        "none": 4,
+        "LOW": 5,
+        "MEDIUM": 18,
+        "HIGH": 2
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 5,
+          "unchanged": 22,
+          "improved": 2
         },
         "education": {
-          "worsened": 0,
-          "unchanged": 5,
-          "improved": 0
+          "worsened": 6,
+          "unchanged": 19,
+          "improved": 4
         },
         "employment_income": {
-          "worsened": 1,
-          "unchanged": 4,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 0,
-          "unchanged": 5,
-          "improved": 0
-        },
-        "household_composition": {
-          "worsened": 3,
-          "unchanged": 1,
+          "worsened": 17,
+          "unchanged": 11,
           "improved": 1
         },
+        "health": {
+          "worsened": 5,
+          "unchanged": 19,
+          "improved": 5
+        },
+        "household_composition": {
+          "worsened": 7,
+          "unchanged": 20,
+          "improved": 2
+        },
         "housing_conditions": {
-          "worsened": 0,
-          "unchanged": 5,
-          "improved": 0
+          "worsened": 6,
+          "unchanged": 22,
+          "improved": 1
         }
       }
     },
     "63": {
-      "totalSubmissions": 8,
+      "totalSubmissions": 26,
       "bySignal": {
-        "none": 2,
-        "LOW": 0,
-        "MEDIUM": 5,
-        "HIGH": 1
+        "none": 4,
+        "LOW": 8,
+        "MEDIUM": 11,
+        "HIGH": 3
       },
       "byCategory": {
         "assets_utilities": {
           "worsened": 1,
-          "unchanged": 7,
-          "improved": 0
+          "unchanged": 24,
+          "improved": 1
         },
         "education": {
-          "worsened": 1,
-          "unchanged": 6,
-          "improved": 1
-        },
-        "employment_income": {
           "worsened": 5,
-          "unchanged": 3,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 2,
-          "unchanged": 4,
+          "unchanged": 19,
           "improved": 2
         },
-        "household_composition": {
+        "employment_income": {
+          "worsened": 12,
+          "unchanged": 11,
+          "improved": 3
+        },
+        "health": {
           "worsened": 3,
-          "unchanged": 4,
-          "improved": 1
+          "unchanged": 20,
+          "improved": 3
+        },
+        "household_composition": {
+          "worsened": 8,
+          "unchanged": 18,
+          "improved": 0
         },
         "housing_conditions": {
-          "worsened": 1,
-          "unchanged": 7,
-          "improved": 0
+          "worsened": 6,
+          "unchanged": 19,
+          "improved": 1
         }
       }
     },
     "64": {
-      "totalSubmissions": 5,
+      "totalSubmissions": 36,
       "bySignal": {
-        "none": 1,
-        "LOW": 0,
-        "MEDIUM": 4,
-        "HIGH": 0
+        "none": 6,
+        "LOW": 9,
+        "MEDIUM": 19,
+        "HIGH": 2
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 0,
-          "unchanged": 5,
-          "improved": 0
+          "worsened": 6,
+          "unchanged": 27,
+          "improved": 3
         },
         "education": {
-          "worsened": 0,
-          "unchanged": 5,
-          "improved": 0
+          "worsened": 10,
+          "unchanged": 24,
+          "improved": 2
         },
         "employment_income": {
-          "worsened": 3,
-          "unchanged": 2,
-          "improved": 0
+          "worsened": 14,
+          "unchanged": 20,
+          "improved": 2
         },
         "health": {
-          "worsened": 1,
-          "unchanged": 3,
+          "worsened": 6,
+          "unchanged": 29,
           "improved": 1
         },
         "household_composition": {
-          "worsened": 3,
-          "unchanged": 2,
-          "improved": 0
+          "worsened": 12,
+          "unchanged": 22,
+          "improved": 2
         },
         "housing_conditions": {
-          "worsened": 1,
-          "unchanged": 3,
-          "improved": 1
+          "worsened": 6,
+          "unchanged": 28,
+          "improved": 2
         }
       }
     },
     "65": {
-      "totalSubmissions": 9,
+      "totalSubmissions": 32,
       "bySignal": {
-        "none": 3,
+        "none": 6,
         "LOW": 3,
-        "MEDIUM": 2,
-        "HIGH": 1
+        "MEDIUM": 20,
+        "HIGH": 3
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 0,
-          "unchanged": 8,
-          "improved": 1
+          "worsened": 5,
+          "unchanged": 25,
+          "improved": 2
         },
         "education": {
-          "worsened": 3,
-          "unchanged": 6,
-          "improved": 0
+          "worsened": 6,
+          "unchanged": 19,
+          "improved": 7
         },
         "employment_income": {
-          "worsened": 1,
-          "unchanged": 8,
-          "improved": 0
+          "worsened": 18,
+          "unchanged": 10,
+          "improved": 4
         },
         "health": {
-          "worsened": 1,
-          "unchanged": 7,
-          "improved": 1
+          "worsened": 4,
+          "unchanged": 24,
+          "improved": 4
         },
         "household_composition": {
-          "worsened": 5,
-          "unchanged": 3,
-          "improved": 1
+          "worsened": 10,
+          "unchanged": 22,
+          "improved": 0
         },
         "housing_conditions": {
-          "worsened": 1,
-          "unchanged": 7,
+          "worsened": 6,
+          "unchanged": 25,
           "improved": 1
         }
       }
     },
     "71": {
-      "totalSubmissions": 11,
+      "totalSubmissions": 33,
       "bySignal": {
-        "none": 1,
-        "LOW": 2,
-        "MEDIUM": 5,
+        "none": 8,
+        "LOW": 12,
+        "MEDIUM": 10,
         "HIGH": 3
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 3,
-          "unchanged": 7,
-          "improved": 1
+          "worsened": 6,
+          "unchanged": 24,
+          "improved": 3
         },
         "education": {
-          "worsened": 4,
-          "unchanged": 5,
-          "improved": 2
-        },
-        "employment_income": {
-          "worsened": 5,
-          "unchanged": 6,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 1,
-          "unchanged": 9,
+          "worsened": 3,
+          "unchanged": 29,
           "improved": 1
         },
+        "employment_income": {
+          "worsened": 9,
+          "unchanged": 22,
+          "improved": 2
+        },
+        "health": {
+          "worsened": 5,
+          "unchanged": 23,
+          "improved": 5
+        },
         "household_composition": {
-          "worsened": 7,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 11,
+          "unchanged": 19,
+          "improved": 3
         },
         "housing_conditions": {
-          "worsened": 3,
-          "unchanged": 6,
-          "improved": 2
+          "worsened": 6,
+          "unchanged": 23,
+          "improved": 4
         }
       }
     },
     "72": {
-      "totalSubmissions": 5,
+      "totalSubmissions": 22,
       "bySignal": {
-        "none": 2,
-        "LOW": 1,
-        "MEDIUM": 2,
-        "HIGH": 0
+        "none": 4,
+        "LOW": 4,
+        "MEDIUM": 12,
+        "HIGH": 2
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 3,
+          "unchanged": 16,
+          "improved": 3
         },
         "education": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 1
+          "worsened": 3,
+          "unchanged": 16,
+          "improved": 3
         },
         "employment_income": {
-          "worsened": 1,
-          "unchanged": 4,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 0,
-          "unchanged": 4,
+          "worsened": 10,
+          "unchanged": 11,
           "improved": 1
         },
-        "household_composition": {
-          "worsened": 3,
-          "unchanged": 2,
+        "health": {
+          "worsened": 6,
+          "unchanged": 16,
           "improved": 0
         },
+        "household_composition": {
+          "worsened": 6,
+          "unchanged": 15,
+          "improved": 1
+        },
         "housing_conditions": {
-          "worsened": 0,
-          "unchanged": 5,
+          "worsened": 7,
+          "unchanged": 15,
           "improved": 0
         }
       }
     },
     "73": {
-      "totalSubmissions": 7,
+      "totalSubmissions": 28,
       "bySignal": {
-        "none": 3,
-        "LOW": 2,
-        "MEDIUM": 0,
-        "HIGH": 2
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 0,
-          "unchanged": 7,
-          "improved": 0
-        },
-        "education": {
-          "worsened": 0,
-          "unchanged": 7,
-          "improved": 0
-        },
-        "employment_income": {
-          "worsened": 2,
-          "unchanged": 5,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 3,
-          "unchanged": 4,
-          "improved": 0
-        },
-        "household_composition": {
-          "worsened": 2,
-          "unchanged": 5,
-          "improved": 0
-        },
-        "housing_conditions": {
-          "worsened": 2,
-          "unchanged": 5,
-          "improved": 0
-        }
-      }
-    },
-    "74": {
-      "totalSubmissions": 8,
-      "bySignal": {
-        "none": 4,
-        "LOW": 1,
-        "MEDIUM": 1,
-        "HIGH": 2
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 7,
-          "improved": 0
-        },
-        "education": {
-          "worsened": 2,
-          "unchanged": 6,
-          "improved": 0
-        },
-        "employment_income": {
-          "worsened": 3,
-          "unchanged": 4,
-          "improved": 1
-        },
-        "health": {
-          "worsened": 0,
-          "unchanged": 7,
-          "improved": 1
-        },
-        "household_composition": {
-          "worsened": 2,
-          "unchanged": 6,
-          "improved": 0
-        },
-        "housing_conditions": {
-          "worsened": 1,
-          "unchanged": 7,
-          "improved": 0
-        }
-      }
-    },
-    "75": {
-      "totalSubmissions": 4,
-      "bySignal": {
-        "none": 0,
-        "LOW": 0,
-        "MEDIUM": 3,
+        "none": 2,
+        "LOW": 8,
+        "MEDIUM": 17,
         "HIGH": 1
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 0,
-          "unchanged": 3,
-          "improved": 1
+          "worsened": 5,
+          "unchanged": 19,
+          "improved": 4
         },
         "education": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 4,
+          "unchanged": 22,
+          "improved": 2
         },
         "employment_income": {
-          "worsened": 4,
-          "unchanged": 0,
+          "worsened": 12,
+          "unchanged": 16,
           "improved": 0
         },
         "health": {
-          "worsened": 2,
-          "unchanged": 2,
-          "improved": 0
+          "worsened": 4,
+          "unchanged": 19,
+          "improved": 5
         },
         "household_composition": {
-          "worsened": 1,
-          "unchanged": 2,
+          "worsened": 16,
+          "unchanged": 11,
           "improved": 1
         },
         "housing_conditions": {
           "worsened": 1,
-          "unchanged": 3,
-          "improved": 0
+          "unchanged": 25,
+          "improved": 2
+        }
+      }
+    },
+    "74": {
+      "totalSubmissions": 36,
+      "bySignal": {
+        "none": 7,
+        "LOW": 12,
+        "MEDIUM": 14,
+        "HIGH": 3
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 4,
+          "unchanged": 29,
+          "improved": 3
+        },
+        "education": {
+          "worsened": 6,
+          "unchanged": 27,
+          "improved": 3
+        },
+        "employment_income": {
+          "worsened": 14,
+          "unchanged": 17,
+          "improved": 5
+        },
+        "health": {
+          "worsened": 5,
+          "unchanged": 28,
+          "improved": 3
+        },
+        "household_composition": {
+          "worsened": 11,
+          "unchanged": 23,
+          "improved": 2
+        },
+        "housing_conditions": {
+          "worsened": 9,
+          "unchanged": 22,
+          "improved": 5
+        }
+      }
+    },
+    "75": {
+      "totalSubmissions": 34,
+      "bySignal": {
+        "none": 8,
+        "LOW": 9,
+        "MEDIUM": 12,
+        "HIGH": 5
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 4,
+          "unchanged": 26,
+          "improved": 4
+        },
+        "education": {
+          "worsened": 5,
+          "unchanged": 28,
+          "improved": 1
+        },
+        "employment_income": {
+          "worsened": 13,
+          "unchanged": 19,
+          "improved": 2
+        },
+        "health": {
+          "worsened": 11,
+          "unchanged": 21,
+          "improved": 2
+        },
+        "household_composition": {
+          "worsened": 8,
+          "unchanged": 22,
+          "improved": 4
+        },
+        "housing_conditions": {
+          "worsened": 11,
+          "unchanged": 21,
+          "improved": 2
         }
       }
     },
     "76": {
-      "totalSubmissions": 10,
+      "totalSubmissions": 21,
       "bySignal": {
-        "none": 3,
-        "LOW": 0,
-        "MEDIUM": 7,
-        "HIGH": 0
+        "none": 5,
+        "LOW": 2,
+        "MEDIUM": 12,
+        "HIGH": 2
       },
       "byCategory": {
         "assets_utilities": {
           "worsened": 0,
-          "unchanged": 10,
-          "improved": 0
+          "unchanged": 19,
+          "improved": 2
         },
         "education": {
-          "worsened": 2,
-          "unchanged": 7,
+          "worsened": 6,
+          "unchanged": 14,
           "improved": 1
         },
         "employment_income": {
-          "worsened": 6,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 11,
+          "unchanged": 9,
+          "improved": 1
         },
         "health": {
-          "worsened": 1,
-          "unchanged": 9,
+          "worsened": 2,
+          "unchanged": 19,
           "improved": 0
         },
         "household_composition": {
-          "worsened": 2,
-          "unchanged": 8,
-          "improved": 0
+          "worsened": 5,
+          "unchanged": 15,
+          "improved": 1
         },
         "housing_conditions": {
-          "worsened": 1,
-          "unchanged": 6,
+          "worsened": 3,
+          "unchanged": 15,
           "improved": 3
         }
       }
     },
     "81": {
-      "totalSubmissions": 4,
+      "totalSubmissions": 25,
       "bySignal": {
-        "none": 1,
-        "LOW": 1,
-        "MEDIUM": 2,
-        "HIGH": 0
+        "none": 3,
+        "LOW": 9,
+        "MEDIUM": 10,
+        "HIGH": 3
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 7,
+          "unchanged": 17,
+          "improved": 1
         },
         "education": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 3,
+          "unchanged": 20,
+          "improved": 2
         },
         "employment_income": {
-          "worsened": 1,
-          "unchanged": 2,
-          "improved": 1
+          "worsened": 11,
+          "unchanged": 12,
+          "improved": 2
         },
         "health": {
-          "worsened": 2,
-          "unchanged": 1,
-          "improved": 1
+          "worsened": 6,
+          "unchanged": 15,
+          "improved": 4
         },
         "household_composition": {
-          "worsened": 1,
-          "unchanged": 2,
-          "improved": 1
+          "worsened": 9,
+          "unchanged": 14,
+          "improved": 2
         },
         "housing_conditions": {
-          "worsened": 1,
-          "unchanged": 2,
-          "improved": 1
+          "worsened": 2,
+          "unchanged": 21,
+          "improved": 2
         }
       }
     },
     "82": {
-      "totalSubmissions": 7,
+      "totalSubmissions": 34,
       "bySignal": {
-        "none": 2,
-        "LOW": 1,
-        "MEDIUM": 3,
-        "HIGH": 1
+        "none": 6,
+        "LOW": 7,
+        "MEDIUM": 18,
+        "HIGH": 3
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 3,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 2,
+          "unchanged": 28,
+          "improved": 4
         },
         "education": {
-          "worsened": 0,
-          "unchanged": 7,
-          "improved": 0
+          "worsened": 4,
+          "unchanged": 28,
+          "improved": 2
         },
         "employment_income": {
-          "worsened": 3,
-          "unchanged": 4,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 1,
-          "unchanged": 6,
-          "improved": 0
-        },
-        "household_composition": {
-          "worsened": 2,
-          "unchanged": 4,
+          "worsened": 18,
+          "unchanged": 15,
           "improved": 1
         },
+        "health": {
+          "worsened": 7,
+          "unchanged": 22,
+          "improved": 5
+        },
+        "household_composition": {
+          "worsened": 6,
+          "unchanged": 26,
+          "improved": 2
+        },
         "housing_conditions": {
-          "worsened": 0,
-          "unchanged": 7,
-          "improved": 0
+          "worsened": 7,
+          "unchanged": 24,
+          "improved": 3
         }
       }
     },
     "91": {
-      "totalSubmissions": 15,
+      "totalSubmissions": 37,
       "bySignal": {
-        "none": 2,
-        "LOW": 5,
-        "MEDIUM": 6,
-        "HIGH": 2
+        "none": 8,
+        "LOW": 9,
+        "MEDIUM": 16,
+        "HIGH": 4
       },
       "byCategory": {
         "assets_utilities": {
           "worsened": 2,
-          "unchanged": 11,
-          "improved": 2
+          "unchanged": 31,
+          "improved": 4
         },
         "education": {
           "worsened": 4,
-          "unchanged": 9,
-          "improved": 2
+          "unchanged": 29,
+          "improved": 4
         },
         "employment_income": {
-          "worsened": 7,
-          "unchanged": 7,
-          "improved": 1
+          "worsened": 17,
+          "unchanged": 20,
+          "improved": 0
         },
         "health": {
-          "worsened": 0,
-          "unchanged": 13,
+          "worsened": 10,
+          "unchanged": 25,
           "improved": 2
         },
         "household_composition": {
-          "worsened": 8,
-          "unchanged": 6,
-          "improved": 1
+          "worsened": 11,
+          "unchanged": 21,
+          "improved": 5
         },
         "housing_conditions": {
-          "worsened": 2,
-          "unchanged": 10,
-          "improved": 3
+          "worsened": 5,
+          "unchanged": 28,
+          "improved": 4
         }
       }
     },
     "92": {
-      "totalSubmissions": 7,
+      "totalSubmissions": 27,
       "bySignal": {
-        "none": 0,
-        "LOW": 2,
-        "MEDIUM": 3,
-        "HIGH": 2
+        "none": 3,
+        "LOW": 4,
+        "MEDIUM": 14,
+        "HIGH": 6
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 5,
-          "improved": 1
+          "worsened": 7,
+          "unchanged": 15,
+          "improved": 5
         },
         "education": {
-          "worsened": 2,
-          "unchanged": 4,
-          "improved": 1
+          "worsened": 5,
+          "unchanged": 19,
+          "improved": 3
         },
         "employment_income": {
-          "worsened": 3,
-          "unchanged": 4,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 3,
-          "unchanged": 4,
-          "improved": 0
-        },
-        "household_composition": {
-          "worsened": 5,
-          "unchanged": 1,
+          "worsened": 15,
+          "unchanged": 11,
           "improved": 1
         },
+        "health": {
+          "worsened": 4,
+          "unchanged": 19,
+          "improved": 4
+        },
+        "household_composition": {
+          "worsened": 13,
+          "unchanged": 14,
+          "improved": 0
+        },
         "housing_conditions": {
-          "worsened": 1,
-          "unchanged": 3,
-          "improved": 3
+          "worsened": 4,
+          "unchanged": 22,
+          "improved": 1
         }
       }
     },
     "93": {
-      "totalSubmissions": 4,
+      "totalSubmissions": 27,
       "bySignal": {
-        "none": 0,
-        "LOW": 1,
-        "MEDIUM": 3,
-        "HIGH": 0
+        "none": 6,
+        "LOW": 4,
+        "MEDIUM": 13,
+        "HIGH": 4
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 6,
+          "unchanged": 20,
+          "improved": 1
         },
         "education": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 4,
+          "unchanged": 21,
+          "improved": 2
         },
         "employment_income": {
-          "worsened": 2,
-          "unchanged": 2,
+          "worsened": 15,
+          "unchanged": 12,
           "improved": 0
         },
         "health": {
           "worsened": 1,
-          "unchanged": 3,
-          "improved": 0
+          "unchanged": 22,
+          "improved": 4
         },
         "household_composition": {
-          "worsened": 2,
-          "unchanged": 1,
-          "improved": 1
+          "worsened": 7,
+          "unchanged": 18,
+          "improved": 2
         },
         "housing_conditions": {
-          "worsened": 1,
-          "unchanged": 3,
-          "improved": 0
+          "worsened": 4,
+          "unchanged": 19,
+          "improved": 4
         }
       }
     },
     "94": {
-      "totalSubmissions": 5,
+      "totalSubmissions": 33,
       "bySignal": {
-        "none": 0,
-        "LOW": 2,
-        "MEDIUM": 3,
-        "HIGH": 0
-      },
-      "byCategory": {
-        "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 4,
-          "improved": 0
-        },
-        "education": {
-          "worsened": 0,
-          "unchanged": 5,
-          "improved": 0
-        },
-        "employment_income": {
-          "worsened": 3,
-          "unchanged": 2,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 0,
-          "unchanged": 3,
-          "improved": 2
-        },
-        "household_composition": {
-          "worsened": 2,
-          "unchanged": 3,
-          "improved": 0
-        },
-        "housing_conditions": {
-          "worsened": 0,
-          "unchanged": 5,
-          "improved": 0
-        }
-      }
-    },
-    "95": {
-      "totalSubmissions": 4,
-      "bySignal": {
-        "none": 0,
-        "LOW": 3,
-        "MEDIUM": 0,
+        "none": 6,
+        "LOW": 10,
+        "MEDIUM": 16,
         "HIGH": 1
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 3,
-          "improved": 0
+          "worsened": 2,
+          "unchanged": 28,
+          "improved": 3
         },
         "education": {
-          "worsened": 1,
-          "unchanged": 3,
-          "improved": 0
+          "worsened": 4,
+          "unchanged": 23,
+          "improved": 6
         },
         "employment_income": {
-          "worsened": 1,
-          "unchanged": 2,
+          "worsened": 12,
+          "unchanged": 18,
+          "improved": 3
+        },
+        "health": {
+          "worsened": 4,
+          "unchanged": 28,
+          "improved": 1
+        },
+        "household_composition": {
+          "worsened": 15,
+          "unchanged": 17,
+          "improved": 1
+        },
+        "housing_conditions": {
+          "worsened": 4,
+          "unchanged": 24,
+          "improved": 5
+        }
+      }
+    },
+    "95": {
+      "totalSubmissions": 35,
+      "bySignal": {
+        "none": 10,
+        "LOW": 10,
+        "MEDIUM": 13,
+        "HIGH": 2
+      },
+      "byCategory": {
+        "assets_utilities": {
+          "worsened": 7,
+          "unchanged": 26,
+          "improved": 2
+        },
+        "education": {
+          "worsened": 6,
+          "unchanged": 27,
+          "improved": 2
+        },
+        "employment_income": {
+          "worsened": 13,
+          "unchanged": 21,
           "improved": 1
         },
         "health": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 3,
+          "unchanged": 27,
+          "improved": 5
         },
         "household_composition": {
-          "worsened": 3,
-          "unchanged": 1,
-          "improved": 0
+          "worsened": 7,
+          "unchanged": 25,
+          "improved": 3
         },
         "housing_conditions": {
-          "worsened": 0,
-          "unchanged": 4,
-          "improved": 0
+          "worsened": 4,
+          "unchanged": 24,
+          "improved": 7
         }
       }
     },
     "96": {
-      "totalSubmissions": 6,
+      "totalSubmissions": 26,
       "bySignal": {
-        "none": 0,
-        "LOW": 2,
-        "MEDIUM": 4,
-        "HIGH": 0
+        "none": 7,
+        "LOW": 7,
+        "MEDIUM": 7,
+        "HIGH": 5
       },
       "byCategory": {
         "assets_utilities": {
-          "worsened": 1,
-          "unchanged": 5,
-          "improved": 0
-        },
-        "education": {
-          "worsened": 0,
-          "unchanged": 6,
-          "improved": 0
-        },
-        "employment_income": {
           "worsened": 3,
-          "unchanged": 3,
-          "improved": 0
-        },
-        "health": {
-          "worsened": 1,
-          "unchanged": 4,
+          "unchanged": 22,
           "improved": 1
         },
+        "education": {
+          "worsened": 4,
+          "unchanged": 19,
+          "improved": 3
+        },
+        "employment_income": {
+          "worsened": 10,
+          "unchanged": 15,
+          "improved": 1
+        },
+        "health": {
+          "worsened": 7,
+          "unchanged": 17,
+          "improved": 2
+        },
         "household_composition": {
-          "worsened": 2,
-          "unchanged": 3,
+          "worsened": 11,
+          "unchanged": 14,
           "improved": 1
         },
         "housing_conditions": {
-          "worsened": 1,
-          "unchanged": 5,
-          "improved": 0
+          "worsened": 4,
+          "unchanged": 21,
+          "improved": 1
         }
       }
     }

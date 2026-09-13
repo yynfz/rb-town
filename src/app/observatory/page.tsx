@@ -11,7 +11,7 @@ const seedData = seedDataRaw as ObservatoryState;
 export default function ObservatoryPage() {
   return (
     <main className="flex min-h-screen flex-col bg-gray-50 text-black">
-      <header className="flex items-center justify-between border-b border-gray-200 px-6 py-4 bg-white">
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md flex items-center justify-between border-b border-gray-200 px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/rb-logo-hq.png"

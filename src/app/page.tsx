@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Nav */}
-      <header className="flex items-center justify-between border-b border-white/10 px-6 py-4">
+      <header className="sticky top-0 z-50 bg-gray-950/80 backdrop-blur-md flex items-center justify-between border-b border-white/10 px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/rb-logo-hq.png"

@@ -66,7 +66,7 @@ export function SubmissionFlow() {
         {status === "SUBMITTING" ? (
           <div className="max-w-2xl mx-auto p-12 bg-white rounded-lg shadow-sm border border-gray-200 text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-6"></div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Anchoring to Sepolia...</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Anchoring on-chain...</h2>
             <p className="text-gray-600">Please confirm the transaction in your wallet.</p>
           </div>
         ) : (

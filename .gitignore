@@ -5,6 +5,7 @@ dist/
 build/
 .next/
 out/
+*.tsbuildinfo
 # Environment files and secrets
 .env
 .env*.local

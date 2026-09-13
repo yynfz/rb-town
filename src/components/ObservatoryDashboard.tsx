@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   PieChart,
   Pie,
@@ -14,6 +14,8 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { useSubmission } from "./SubmissionContext";
+import { applySubmission } from "../lib/observatory";
 import type { ObservatoryState } from "../lib/types";
 import { BPS_PROVINCES, CATEGORIES } from "../lib/constants";
 
@@ -37,14 +39,20 @@ export function ObservatoryDashboard({
 }: {
   initialState: ObservatoryState;
 }) {
-  const [data] = useState<ObservatoryState>(initialState);
+  const { latestSubmission } = useSubmission();
+
+  const data = React.useMemo(() => {
+    return latestSubmission
+      ? applySubmission(initialState, latestSubmission)
+      : initialState;
+  }, [initialState, latestSubmission]);
 
   // 1. Prepare Signal Distribution Data (Donut Chart)
   const signalData = [
-    { name: "None", value: data.bySignal.none, color: SIGNAL_COLORS.none },
-    { name: "Low", value: data.bySignal.LOW, color: SIGNAL_COLORS.LOW },
-    { name: "Medium", value: data.bySignal.MEDIUM, color: SIGNAL_COLORS.MEDIUM },
-    { name: "High", value: data.bySignal.HIGH, color: SIGNAL_COLORS.HIGH },
+    { name: "None", value: data.bySignal.none, color: SIGNAL_COLORS.none, key: "none" },
+    { name: "Low", value: data.bySignal.LOW, color: SIGNAL_COLORS.LOW, key: "LOW" },
+    { name: "Medium", value: data.bySignal.MEDIUM, color: SIGNAL_COLORS.MEDIUM, key: "MEDIUM" },
+    { name: "High", value: data.bySignal.HIGH, color: SIGNAL_COLORS.HIGH, key: "HIGH" },
   ].filter((d) => d.value > 0);
 
   // 2. Prepare Category Data (Grouped Bar Chart)
@@ -97,10 +105,19 @@ export function ObservatoryDashboard({
                   outerRadius={80}
                   paddingAngle={5}
                   dataKey="value"
+                  stroke="none"
                 >
-                  {signalData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
+                  {signalData.map((entry, index) => {
+                    const isMySignal = latestSubmission?.signal === entry.key;
+                    return (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={entry.color}
+                        stroke={isMySignal ? "#111827" : "none"}
+                        strokeWidth={isMySignal ? 3 : 0}
+                      />
+                    );
+                  })}
                 </Pie>
                 <Tooltip
                   // eslint-disable-next-line @typescript-eslint/no-explicit-any

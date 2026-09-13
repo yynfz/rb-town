@@ -5,6 +5,8 @@ import { WorldIdGate } from "./WorldIdGate";
 import { SubmissionForm } from "./SubmissionForm";
 import { ConfirmationScreen } from "./ConfirmationScreen";
 import { useSubmitAttestation } from "../hooks/useSubmitAttestation";
+import { useSubmission } from "./SubmissionContext";
+import { computeRealitySignal } from "../lib/heuristic";
 import type { Payload } from "../lib/types";
 
 type FlowStatus = "FORM" | "SUBMITTING" | "CONFIRMED";
@@ -19,16 +21,26 @@ export function SubmissionFlow() {
   } | null>(null);
 
   const { submitAttestation, error } = useSubmitAttestation();
+  const { setLatestSubmission } = useSubmission();
 
   const handleSubmit = async (payload: Payload, regionCode: number) => {
     setStatus("SUBMITTING");
     const result = await submitAttestation(payload, regionCode);
 
     if (result) {
+      const { signal } = computeRealitySignal(payload);
+      
       setSubmissionResult({
         payload,
         ...result,
       });
+      
+      setLatestSubmission({
+        payload,
+        signal,
+        regionCode: regionCode.toString(),
+      });
+      
       setStatus("CONFIRMED");
     } else {
       // Revert to form to allow retry

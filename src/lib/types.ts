@@ -19,6 +19,24 @@ export interface CompletedSubmission {
   regionCode: string;
 }
 
+export interface RegionDetail {
+  totalSubmissions: number;
+  bySignal: {
+    none: number;
+    LOW: number;
+    MEDIUM: number;
+    HIGH: number;
+  };
+  byCategory: Record<
+    import("./constants").Category,
+    {
+      worsened: number;
+      unchanged: number;
+      improved: number;
+    }
+  >;
+}
+
 export interface ObservatoryState {
   totalSubmissions: number;
   bySignal: {
@@ -36,5 +54,6 @@ export interface ObservatoryState {
     }
   >;
   byRegion: Record<string, number>;
+  byRegionDetail?: Record<string, RegionDetail>;
 }
 

@@ -27,15 +27,17 @@ export function WalletConnect() {
 
   if (isConnected && address) {
     return (
-      <div className="flex items-center gap-3">
-        <span className="rounded-full bg-green-500/10 px-3 py-1 text-sm font-mono text-green-400 border border-green-500/20">
-          {address.slice(0, 6)}…{address.slice(-4)}
-        </span>
+      <div className="flex items-center gap-2">
         <button
           onClick={() => disconnect()}
-          className="rounded-lg border border-white/10 px-4 py-2 text-sm text-white/60 hover:text-white hover:border-white/30 transition-colors"
+          title="Click to disconnect wallet"
+          className="group flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1.5 text-xs font-mono text-green-400 hover:border-red-500/40 hover:bg-red-500/10 hover:text-red-400 transition-all cursor-pointer"
         >
-          Disconnect
+          <span className="h-2 w-2 rounded-full bg-green-400 group-hover:bg-red-400 transition-colors" />
+          <span>{address.slice(0, 6)}…{address.slice(-4)}</span>
+          <span className="ml-1 text-[11px] font-sans font-medium text-white/50 group-hover:text-red-400 transition-colors">
+            ✕ Disconnect
+          </span>
         </button>
       </div>
     );
